@@ -1,0 +1,85 @@
+<h2 >Construisez votre consentement aux cookies</h2>
+<div class="panel">
+    <mat-expansion-panel id="cd">
+<mat-expansion-panel-header>
+    <mat-panel-title id="Step"> <b>Step 1 </b> </mat-panel-title>
+
+   
+
+</mat-expansion-panel-header>
+<div id="f"><b>Conception de bannière .</b> <br></div>
+ <h4>Changez le design de votre bannière.</h4> 
+ 
+
+<div id="Cadre">
+
+<mat-grid-list  cols="2" rowHeight="2,5:2">
+                            <br>
+                            <form (ngSubmit)="insertData()" >
+
+                            <div class="ok">
+                                <div class="form-group">
+                                   <label for="one" style="color:rgb(36, 0, 136)">name  <br></label>
+                                   <input type="text" class="form-control" name="name" id="one" aria-describedby="helpId" placeholder="name" [(ngModel)]="client.name">
+                                </div>
+                              
+                                <br>
+                                <mat-form-field  appearance="fill">
+                                    <mat-label style="color:rgb(36, 0, 136)"> <b>Layout</b> </mat-label>
+                                    <mat-select  >
+                                      <mat-option value="one">Cloud</mat-option>
+                                      <mat-option value="two">Bar</mat-option>
+                                      <mat-option value="two">Box</mat-option>
+                                      
+                                    </mat-select>
+                        
+                                  </mat-form-field>
+                               
+
+                                  <br>
+                                  <mat-form-field appearance="fill">
+                                    <mat-label style="color:rgb(36, 0, 136)"> <b>Position_y</b> </mat-label>
+                                    <mat-select>
+                                      <mat-option value="one">Bottom</mat-option>
+                                      <mat-option value="two">Top</mat-option>
+                                      <mat-option value="two">Middle</mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+                                  <br>
+                                  <mat-form-field appearance="fill">
+                                    <mat-label style="color:rgb(36, 0, 136)"> <b>Position_x</b> </mat-label>
+                                    <mat-select>
+                                      <mat-option value="one">Left</mat-option>
+                                      <mat-option value="two">Center</mat-option>
+                                      <mat-option value="two">Right</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                                <br>
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="color:rgb(36, 0, 136)"> <b>Transition</b> </mat-label>
+                                    <mat-select>
+                                        <mat-option value="one">Zoom</mat-option>
+                                        <mat-option value="two">Center</mat-option>
+
+                                    </mat-select>
+                                </mat-form-field>
+                                <button  id = 'but' class="btn btn-dark btn -sm mt-4">Valider</button>
+                                <br>
+                            </div>
+                          
+                          </form>
+   
+</mat-grid-list>
+</div>
+
+</mat-expansion-panel>
+</div>
+
+<div id="VEC">
+    <mat-card>
+        <mat-card-title class="vector"><img [src]="image"></mat-card-title>
+        <mat-card-content><iframe src="/assets/code/ui.html" style="height:450px;width:400px;" [frameBorder]="0" allowfullscreen></iframe>
+        </mat-card-content>
+    </mat-card>
+</div>
