@@ -23,7 +23,7 @@ export const navbarData = [
     },
     {
         routeLink: 'pages',
-        icon: 'fal fa-file',
+        icon: 'cookie',
         label: 'Ne vendez pas mes informations personnelles'
     },
     {

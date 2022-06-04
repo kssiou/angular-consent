@@ -158,6 +158,36 @@
 
 
                     <h2>Personaliser les couleur:</h2>
+                    <div class="container">
+
+
+                        <div class="row">
+
+                            <div class="col ">
+                                <input type="color" id="color_picker" name="head" value="red">
+                                <span class="bouton">bouton principale</span>
+                            </div>
+
+
+                            <div class="col"><input type="color" id="color_picker" name="head" value="blue">
+                                <span class="bouton">bouton principale</span>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><input type="color" id="color_picker" name="head" value="#e66465">
+                                <span class="bouton">bouton principale</span>
+
+                            </div>
+
+
+                            <div class="col"><input type="color" id="color_picker" name="head" value="#e66465">
+                                <span class="bouton">bouton principale</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary m-2">enregistrer</button>
                 </div>
             </form>
 
@@ -207,7 +237,7 @@
 
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary m-2">Submit</button>
+                    <button type="submit" class="btn btn-primary m-2">enregistrer</button>
 
                 </form>
 
@@ -217,10 +247,61 @@
 
 
         </mat-tab>
-        <mat-tab label="test">
+        <mat-tab label="Espace de preference">
+            <h1>Conception de bannière</h1>
+
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col-5">
+                            <h3>titre de description :</h3>
+
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="col-5 ">
+                            <h3>description :</h3>
+
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 ">
+                            <h3>titre :</h3>
+                            <input type="email " class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp ">
+
+                        </div>
+                        <div class="col-5 ">
+                            <h3>link :</h3>
+
+
+                            <input type="email " class="form-control input-sm " id="exampleInputEmail1 " aria-describedby="emailHelp ">
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary m-2">enregistrer</button>
+
+                </form>
+
+            </div>
+
+
+
 
         </mat-tab>
+        <mat-tab label="code js">
+            <div class="container">
+
+                <mat-card>
+                    <mat-card-title>je suis</mat-card-title>
+                </mat-card>
+
+
+            </div>
+        </mat-tab>
     </mat-tab-group>
+
 </div>
 
 <app-code-ui [item]=" layout "></app-code-ui>

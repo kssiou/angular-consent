@@ -65,6 +65,10 @@ mat-form-field {
     }
 }
 
+.col {
+    padding: 15px;
+}
+
 .label {
     font-weight: bold;
 }
@@ -106,4 +110,17 @@ mat-form-field {
 
 .client {
     width: 700px;
+}
+
+.bouton {
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 20px;
+}
+
+#color_picker {
+    padding: 0px;
+    width: 2em;
+    box-shadow: 0px 3px 7px 0px rgb(0 0 0 / 20%);
+    height: 2em;
 }

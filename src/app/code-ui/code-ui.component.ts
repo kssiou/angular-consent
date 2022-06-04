@@ -138,7 +138,19 @@ ngOnChanges() {
                             value: 'targeting',
                             enabled: false,
                             readonly: false
-                        }
+                        },
+                        cookie_table: [{
+                            col1: '^_ga',
+                            col2: 'google.com',
+                            col3: '2 years',
+                            col4: 'description ...',
+                            is_regex: true
+                        }, {
+                            col1: '_gid',
+                            col2: 'google.com',
+                            col3: '1 day',
+                            col4: 'description ...',
+                        }]
                     }, {
                         title: 'Plus dinformation',
                         description: 'Pour toute question relative à notre politique en matière de cookies et à vos choix, veuillez nous contacter.Pour en savoir plus, merci de consulter notre  <a class="cc-link" href="https://orestbida.com/contact">Politique sur les cookies.</a>.',
