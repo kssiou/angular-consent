@@ -1,0 +1,109 @@
+mat-card-title {
+    margin-bottom: 30px;
+}
+
+mat-button-toggle {
+    // margin: 10px;
+}
+
+mat-form-field {
+    padding-left: 10px;
+}
+
+#funky {
+    background-color: #60fed2;
+}
+
+#turquoise {
+    background-color: #3859d0;
+}
+
+.wrap {
+    border: 1px solid rgb(241, 239, 239);
+    width: 1300px;
+    height: 1000px;
+    margin-bottom: 1rem;
+    &.vert {
+         ::ng-deep {
+            .mat-tab-body-content {
+                // border: 1px solid rgb(172, 172, 172);
+                border-radius: 1px;
+                background-color: white;
+                width: 100%;
+            }
+            .mat-tab-list {
+                padding-right: 20px;
+                margin-right: 60px;
+                margin-left: 40px;
+            }
+            .mat-tab-labels {
+                flex-direction: column;
+            }
+            .mat-tab-group {
+                flex-direction: row;
+            }
+            .mat-ink-bar {
+                height: 100%;
+                left: calc(100% - 5px) !important;
+                width: 2px !important;
+            }
+            .mat-tab-header {
+                border-bottom: none;
+            }
+            .mat-tab-body-wrapper {
+                flex: 1 1 auto;
+            }
+            .mat-tab-header-pagination {
+                display: none !important;
+            }
+            .mat-tab-label {
+                font-size: large;
+                color: black;
+                font-stretch: semi-expanded;
+            }
+        }
+    }
+}
+
+.label {
+    font-weight: bold;
+}
+
+l #form {
+    margin-top: 10px;
+    margin-left: 15px;
+    padding: 15px;
+}
+
+mat-form-field {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#ombre {
+    font-size: large;
+}
+
+#btn-clair {
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+#btn-foncé {
+    border: 1px solid black;
+    background-color: rgb(122, 122, 122);
+    color: white;
+}
+
+#btn-perso {
+    border: 1px solid black;
+    margin-left: 12px;
+}
+
+.col-5 {
+    margin: 10px;
+}
+
+.client {
+    width: 700px;
+}

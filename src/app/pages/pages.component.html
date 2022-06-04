@@ -1,0 +1,226 @@
+<h1> <b> Options</b></h1>
+<div class="wrap" [class.vert]="(tabWay=='vert') ">
+    <mat-tab-group animationDuration="0ms">
+        <mat-tab label="ajouter client">
+            <h1>L'ajout d'un client </h1>
+            <form class="example-form">
+                <h3 for="nomClient">Nom du Client :
+                </h3>
+                <mat-form-field class="client" appearance="fill">
+                    <input matInput type="text" [(ngModel)]="value">
+                </mat-form-field>
+
+                <h3>Nom d'entreprise du client:</h3>
+
+                <mat-form-field class="client" appearance="fill">
+                    <input matInput value="">
+                </mat-form-field>
+                <h3>email :</h3>
+
+                <mat-form-field class="client" appearance="fill">
+                    <input matInput value="">
+                </mat-form-field>
+                <h3>lien de site du client :</h3>
+                <mat-form-field class="client" appearance="fill">
+
+                    <mat-label>lien</mat-label>
+                    <input matInput value="">
+                </mat-form-field>
+
+            </form>
+        </mat-tab>
+
+        <mat-tab label="Conception de bannière">
+            <form>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-5">
+                            <h1> Interface principale</h1>
+                            <h4>Changez le design d'interface principale de bannière.</h4>
+                            <h3 class="label">Layout</h3>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label style="color:rgb(75, 74, 74)"> <b>Layout</b> </mat-label>
+                                <mat-select [(value)]="layout">
+                                    <mat-option value="box">Box</mat-option>
+                                    <mat-option value="cloud">Cloud</mat-option>
+                                    <mat-option value="bar">Bar</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-5">
+                            <h1>
+                                Espace de preferance
+                            </h1>
+                            <h4>Changez le design d'expace de preference de bannière.</h4>
+                            <h3 class="label">Layout :</h3>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label style="color:rgb(75, 74, 74)"> <b>Layout</b> </mat-label>
+                                <mat-select [(value)]="layout">
+                                    <mat-option value="box">Box</mat-option>
+                                    <mat-option value="cloud">Cloud</mat-option>
+                                    <mat-option value="bar">Bar</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <h3 class="label">Position_x :</h3>
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="color:rgb(75, 74, 74)"> <b>Position_x</b> </mat-label>
+
+                                    <mat-select [(value)]="position_x">
+                                        <mat-option value="box">Center</mat-option>
+                                        <mat-option value="cloud">Left</mat-option>
+                                        <mat-option value="bar">Right</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-5">
+                                <h3 class="label">Position_x :</h3>
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="color:rgb(75, 74, 74)"> <b>Position_x :</b> </mat-label>
+
+                                    <mat-select [(value)]="position_x">
+                                        <mat-option value="box">Center</mat-option>
+                                        <mat-option value="cloud">Left</mat-option>
+                                        <mat-option value="bar">Right</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-5">
+                                <h3 class="label">Position_y :</h3>
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="color:rgb(75, 74, 74)"> <b>Position_y</b> </mat-label>
+
+                                    <mat-select [(value)]="position_y">
+                                        <mat-option value="box">Bottom</mat-option>
+                                        <mat-option value="cloud">Middle</mat-option>
+                                        <mat-option value="bar">Top</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-5">
+                                <h3 class="label">Position_y :</h3>
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="color:rgb(75, 74, 74)"> <b>Position_y</b> </mat-label>
+
+                                    <mat-select [(value)]="position_y">
+                                        <mat-option value="box">Bottom</mat-option>
+                                        <mat-option value="cloud">Middle</mat-option>
+                                        <mat-option value="bar">Top</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-5">
+                                <h3 class="label">Transition :</h3>
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label style="color:rgb(75, 74, 74)"> <b>Transition</b> </mat-label>
+
+                                    <mat-select [(value)]="transition">
+                                        <mat-option value="box">Zoom</mat-option>
+                                        <mat-option value="cloud">Slide</mat-option>
+                                        <mat-option value="bar">bar</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <h2>theme :</h2>
+                        </div>
+                        <div class="col-5">
+                            <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+                                <mat-button-toggle value="Foncé"><span class="material-icons">nights_stay</span>Foncé</mat-button-toggle>
+                                <mat-button-toggle value="Clair"><span class="material-icons">light_mode</span>Clair</mat-button-toggle>
+                                <mat-button-toggle value="Clair" id="turquoise">turquise</mat-button-toggle>
+                                <mat-button-toggle value="Clair" id="funky">light funky</mat-button-toggle>
+
+                            </mat-button-toggle-group>
+                        </div>
+                    </div>
+
+
+                    <h2>Personaliser les couleur:</h2>
+                </div>
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </mat-tab>
+        <mat-tab label="text de banniere">
+            <h1>Conception de bannière</h1>
+
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col-5">
+                            <h3>titre :</h3>
+
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="col-5 ">
+                            <h3>description :</h3>
+
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 ">
+                            <h3>titre :</h3>
+                            <input type="email " class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp ">
+
+                        </div>
+                        <div class="col-5 ">
+                            <h3>link :</h3>
+
+
+                            <input type="email " class="form-control input-sm " id="exampleInputEmail1 " aria-describedby="emailHelp ">
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary m-2">Submit</button>
+
+                </form>
+
+            </div>
+
+
+
+
+        </mat-tab>
+        <mat-tab label="test">
+
+        </mat-tab>
+    </mat-tab-group>
+</div>
+
+<app-code-ui [item]=" layout "></app-code-ui>
