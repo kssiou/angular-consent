@@ -13,7 +13,7 @@ export const navbarData = [
     },
     {
         routeLink: 'settings/privacy',
-        icon: 'fas fa-chart-bar',
+        icon: 'fas fa-lock',
         label: 'Politique de confidentialité'
     },
     {
@@ -23,7 +23,7 @@ export const navbarData = [
     },
     {
         routeLink: 'pages',
-        icon: 'fas fa-cookie-bite',
+        icon: 'fas fa-ban',
         label: 'Ne vendez pas mes informations personnelles'
     },
     {
