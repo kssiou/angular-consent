@@ -2,23 +2,23 @@
 export const navbarData = [
     {
         routeLink: 'Cookiesbar',
-        icon: 'fal fa-lock',
+        icon: 'fas fa-cookie-bite',
         label: 'Barre de cookies',
         
     },
     {
         routeLink: 'products',
-        icon: 'fal fa-box-open',
+        icon: 'fas fa-box-open',
         label: 'Politiques juridiques'
     },
     {
         routeLink: 'settings/privacy',
-        icon: 'fal fa-chart-bar',
+        icon: 'fas fa-chart-bar',
         label: 'Politique de confidentialité'
     },
     {
         routeLink: 'settings/cdt',
-        icon: 'fal fa-tags',
+        icon: 'fas fa-tags',
         label: 'Conditions d\'utilisation'
     },
     {
@@ -28,17 +28,17 @@ export const navbarData = [
     },
     {
         routeLink: 'media',
-        icon: 'fal fa-camera',
+        icon: 'fas fa-camera',
         label: 'Media'
     },
     {
         routeLink: 'settings',
-        icon: 'fal fa-cog',
+        icon: 'fas fa-cog',
         label: 'Settings'
     },
     {
         routeLink: '',
-        icon: 'fal fa-cog',
+        icon: 'fas fa-cog',
         label: 'Menu with Children',
         submenuLevel1: [
             {
