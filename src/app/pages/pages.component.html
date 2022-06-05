@@ -3,29 +3,30 @@
     <mat-tab-group animationDuration="0ms">
         <mat-tab label="ajouter client">
             <h1>L'ajout d'un client </h1>
-            <form class="example-form">
-                <h3 for="nomClient">Nom du Client :
+            <form class="example-form" (ngSubmit)="insertData()">
+                <h3 for="nomClient">Nom  :
                 </h3>
                 <mat-form-field class="client" appearance="fill">
-                    <input matInput type="text" [(ngModel)]="value">
+                    <input matInput type="text" name="Nom" [(ngModel)]="client.Nom" >
                 </mat-form-field>
 
-                <h3>L'entreprise du client</h3>
-
-                <mat-form-field class="client" appearance="fill">
-                    <input matInput value="">
-                </mat-form-field>
-                <h3>email :</h3>
+                <h3>Nom d'entreprise</h3>
 
                 <mat-form-field class="client" appearance="fill">
-                    <input matInput value="">
+                    <input matInput value="" name ="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
                 </mat-form-field>
-                <h3>lien de site du client :</h3>
+                <h3>Email:</h3>
+
+                <mat-form-field class="client" appearance="fill">
+                    <input matInput value="" name ="Email" [(ngModel)]="client.Email" >
+                </mat-form-field>
+                <h3>Lien du site :</h3>
                 <mat-form-field class="client" appearance="fill">
 
                     <mat-label>lien</mat-label>
-                    <input matInput value="">
+                    <input matInput value="" name ="Lien_du_site" [(ngModel)]="client.Lien_du_site">
                 </mat-form-field>
+                <button class="btn btn-dark btn -sm mt-4">Valider</button>
 
             </form>
         </mat-tab>
@@ -41,7 +42,7 @@
 
                             <mat-form-field appearance="fill">
                                 <mat-label style="color:rgb(75, 74, 74)"> <b>Layout</b> </mat-label>
-                                <mat-select [(value)]="layout">
+                                <mat-select >
                                     <mat-option value="box">Box</mat-option>
                                     <mat-option value="cloud">Cloud</mat-option>
                                     <mat-option value="bar">Bar</mat-option>
@@ -57,7 +58,7 @@
 
                             <mat-form-field appearance="fill">
                                 <mat-label style="color:rgb(75, 74, 74)"> <b>Layout</b> </mat-label>
-                                <mat-select [(value)]="layout">
+                                <mat-select >
                                     <mat-option value="box">Box</mat-option>
                                     <mat-option value="cloud">Cloud</mat-option>
                                     <mat-option value="bar">Bar</mat-option>
@@ -71,7 +72,7 @@
                                 <mat-form-field appearance="fill">
                                     <mat-label style="color:rgb(75, 74, 74)"> <b>Position_x</b> </mat-label>
 
-                                    <mat-select [(value)]="position_x">
+                                    <mat-select>
                                         <mat-option value="box">Center</mat-option>
                                         <mat-option value="cloud">Left</mat-option>
                                         <mat-option value="bar">Right</mat-option>
@@ -84,7 +85,7 @@
                                 <mat-form-field appearance="fill">
                                     <mat-label style="color:rgb(75, 74, 74)"> <b>Position_x :</b> </mat-label>
 
-                                    <mat-select [(value)]="position_x">
+                                    <mat-select >
                                         <mat-option value="box">Center</mat-option>
                                         <mat-option value="cloud">Left</mat-option>
                                         <mat-option value="bar">Right</mat-option>
@@ -100,7 +101,7 @@
                                 <mat-form-field appearance="fill">
                                     <mat-label style="color:rgb(75, 74, 74)"> <b>Position_y</b> </mat-label>
 
-                                    <mat-select [(value)]="position_y">
+                                    <mat-select >
                                         <mat-option value="box">Bottom</mat-option>
                                         <mat-option value="cloud">Middle</mat-option>
                                         <mat-option value="bar">Top</mat-option>
@@ -113,7 +114,7 @@
                                 <mat-form-field appearance="fill">
                                     <mat-label style="color:rgb(75, 74, 74)"> <b>Position_y</b> </mat-label>
 
-                                    <mat-select [(value)]="position_y">
+                                    <mat-select >
                                         <mat-option value="box">Bottom</mat-option>
                                         <mat-option value="cloud">Middle</mat-option>
                                         <mat-option value="bar">Top</mat-option>
@@ -131,7 +132,7 @@
                                 <mat-form-field appearance="fill">
                                     <mat-label style="color:rgb(75, 74, 74)"> <b>Transition</b> </mat-label>
 
-                                    <mat-select [(value)]="transition">
+                                    <mat-select >
                                         <mat-option value="box">Zoom</mat-option>
                                         <mat-option value="cloud">Slide</mat-option>
                                         <mat-option value="bar">bar</mat-option>
@@ -308,5 +309,4 @@
     </mat-tab-group>
 
 </div>
-
-<app-code-ui [item]=" layout "></app-code-ui>
+<app-code-ui [item]="layout"></app-code-ui>

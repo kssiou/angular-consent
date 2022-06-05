@@ -61,6 +61,7 @@ import {FormsModule} from '@angular/forms';
 
 import {RouterModule, Routes} from '@angular/router';
 import { CodeUiComponent } from './code-ui/code-ui.component';
+import { ClientComponent } from './client/client.component';
 
 const appRoutes: Routes = [
   {
@@ -79,7 +80,8 @@ const appRoutes: Routes = [
     CoupensComponent,
     PagesComponent,
     SettingsComponent,
-    CodeUiComponent
+    CodeUiComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,
