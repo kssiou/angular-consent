@@ -131,12 +131,14 @@
                                 <mat-form-field appearance="fill">
                                     <mat-label style="color:rgb(75, 74, 74)"> <b>Transition</b> </mat-label>
 
-                                    <mat-select [(value)]="transition">
+                                    <mat-select [(value)]="Transition">
                                         <mat-option value="box">Zoom</mat-option>
                                         <mat-option value="cloud">Slide</mat-option>
                                         <mat-option value="bar">bar</mat-option>
                                     </mat-select>
                                 </mat-form-field>
+                                {{Transition}}
+
                             </div>
                         </div>
 
@@ -296,15 +298,14 @@
                     <mat-card-title>code js</mat-card-title>
                     <mat-card-subtitle>
                         Vous avez terminé. Copiez votre code de consentement ci-dessous.</mat-card-subtitle>
-                    <mat-card-content style="background-color:#e9ecef ; height: 100px; overflow-y:scroll;">This article covers using Git and GitHub to collaborate with others on a project, especially if you have to set it up yourself. Git and GitHub can be daunting at first, and it is very easy to get into trouble and waste a lot of time
-                        on source control, when you could be working on your project. This guide is meant to help you navigate the process for a one-time collaboration. If you are working on an open source project, or for a company that already has Git
-                        and GitHub set up, your environment and procedures may differ and
+                    <mat-card-content style="background-color:#e9ecef ; height: 100px; overflow-y:scroll;" [innerText]="v2">
                     </mat-card-content>
                 </mat-card>
 
-
             </div>
+
         </mat-tab>
+
     </mat-tab-group>
 
 </div>
