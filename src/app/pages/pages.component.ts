@@ -1,16 +1,16 @@
 import { AfterContentChecked, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { dataService } from '../data.service';
 import { DataService } from '../service/data.service';
+import { Client } from 'src/app/client';
 
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
   styleUrls: ['./pages.component.scss']
 })
-export class PagesComponent implements AfterContentChecked {
+export class PagesComponent implements OnInit ,AfterContentChecked {
   value = 'Clear me';
 
-  tabWay = "vert";
   layout = '';
   position_x='';
   position_y='';
@@ -18,10 +18,19 @@ export class PagesComponent implements AfterContentChecked {
   v2!: string;
   mi!: string;
 
-  constructor(public dato:dataService) {
+  selectedDay:string='';
+  
+    clients:any;
+    client=new Client;
+
+  tabWay = "vert";
+  
+  
+  constructor(public dataservice:DataService , public dato:dataService) {
 
    }
 
+   
 
    ngAfterContentChecked(): void {
     this.dato.layout=this.layout;
@@ -141,6 +150,25 @@ export class PagesComponent implements AfterContentChecked {
     });
     `;
   }
-  
+  ngOnInit(): void {
+    this.getClientData();
+  }
+
+  getClientData() {
+    console.log('liste des clients');
+    this.dataservice.getData().subscribe(res =>{
+      console.log(res);
+      this.clients=res;
+    }
+      )
+  }
+  insertData(){
+    //console.log('bonjour-insertion-test');
+    //console.log(this.product);
+    this.dataservice.insertData(this.client).subscribe(res =>{
+      console.log(res);
+      //this.getClientData();
+    })
+  }
 
 }

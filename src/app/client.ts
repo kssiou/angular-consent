@@ -1,7 +1,7 @@
 export class Client {
-    name:any;
-    Layout:any;
-    Position_y: any;
-    Position_x:any;
-    Transition:any;
+    Nom:any;
+    Nom_d_entreprise :any;
+    Lien_du_site : any;
+    Email :any;
 }
+
