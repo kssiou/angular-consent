@@ -8,10 +8,10 @@ import { dataService } from '../data.service';
 })
 export class CoupensComponent implements OnInit {
 
-  constructor(public dato:dataService) { }
+  constructor(public data:dataService) { }
 
   ngOnInit(): void {
-    console.log(this.dato.layout);
+    console.log(this.data.layout_gui);
   }
 
 }

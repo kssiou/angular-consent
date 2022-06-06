@@ -1,4 +1,4 @@
-import { AfterContentChecked, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { dataService } from '../data.service';
 import { DataService } from '../service/data.service';
 import { Client } from 'src/app/client';
@@ -12,12 +12,14 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
   value = 'Clear me';
 
   layout = '';
-  position_x='';
-  position_y='';
-  Transition='my name';
-  v2!: string;
-  mi!: string;
-
+  position_x_gui='';
+  position_y_gui='';
+  transition_gui='';
+  layout_settings='';
+  position_settings='';
+  transition_settings='';
+  codejs!: string;
+ 
   selectedDay:string='';
   
     clients:any;
@@ -26,19 +28,23 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
   tabWay = "vert";
   
   
-  constructor(public dataservice:DataService , public dato:dataService) {
+  constructor(public dataservice:DataService , public data:dataService,private cdRef: ChangeDetectorRef) {
 
    }
 
-   
 
    ngAfterContentChecked(): void {
-    this.dato.layout=this.layout;
-    this.dato.position_x=this.position_x;
-    this.dato.position_y=this.position_y;
-    this.dato.transition=this.Transition;
-    this.Transition;
-    this.v2=`var cc = initCookieConsent();
+       this.data.gui_changed$.next({
+        layout_gui:this.layout,
+        position_x_gui:this.position_x_gui,
+        position_y_gui:this.position_y_gui,
+        transition_gui:this.position_y_gui,
+        layout_settings:this.layout_settings,
+        position_settings:this.position_settings,
+        transition_settings:this.transition_settings,
+       });
+
+    this.codejs=`var cc = initCookieConsent();
     cc.run({
         current_lang: 'en',
         autoclear_cookies: true, // default: false
@@ -46,7 +52,7 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
         cookie_name: 'cookie', // default: 'cc_cookie'
         cookie_expiration: 365, // default: 182
         page_scripts: true, // default: false
-  
+
         // auto_language: null,                     // default: null; could also be 'browser' or 'document'
         // autorun: true,                           // default: true
         // delay: 0,                                // default: 0
@@ -61,9 +67,9 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
   
         gui_options: {
             consent_modal: {
-                layout: ${this.dato.layout}, // box,cloud,bar
-                position: 'bottom right', // bottom,middle,top + left,right,center
-                transition: 'slide' // zoom,slide
+                layout: ${this.data.layout_gui}, // box,cloud,bar
+                position: ${this.data.position_x_gui} ${this.data.position_y_gui}, // bottom,middle,top + left,right,center
+                transition: ${this.data.transition_gui} // zoom,slide
             },
             settings_modal: {
                 layout: 'cloud', // box,bar
@@ -142,12 +148,7 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
                         }
                     }, {
                         title: 'Plus dinformation',
-                        description: 'Pour toute question relative à notre politique en matière de cookies et à vos choix, veuillez nous contacter.Pour en savoir plus, merci de consulter notre  <a class="cc-link" href="https://orestbida.com/contact">Politique sur les cookies.</a>.',
-                    }]
-                }
-            }
-        }
-    });
+                        description: 'Pour toute question relative à notre politique en matière de cookies et à vos choix, veuillez nous contacter.Pour en savoir plus, merci de consulter notre  Politique sur les cookies.</a>.', }]}}}});
     `;
   }
   ngOnInit(): void {
@@ -155,7 +156,9 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
   }
 
   getClientData() {
+
     console.log('liste des clients');
+    console.log(this.position_x_gui)
     this.dataservice.getData().subscribe(res =>{
       console.log(res);
       this.clients=res;

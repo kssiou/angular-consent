@@ -2,6 +2,7 @@ import { Component, OnInit,Inject,Renderer2,Input,OnChanges, SimpleChanges} from
 import { DOCUMENT } from '@angular/common';
 import { DomSanitizer, SafeHtml, SafeScript } from '@angular/platform-browser';
 import { dataService } from '../data.service';
+import { distinctUntilChanged } from 'rxjs/operators'
 
 
 function getWindow() {
@@ -13,7 +14,7 @@ function getWindow() {
   templateUrl: './code-ui.component.html',
   styleUrls: ['./code-ui.component.scss']
 })
-export class CodeUiComponent implements OnChanges {
+export class CodeUiComponent {
   @Input() item:string | undefined;
   select="dark";
   layout1="cloud";
@@ -25,15 +26,24 @@ export class CodeUiComponent implements OnChanges {
     private renderer2: Renderer2,
     private sanitizer:DomSanitizer,
     @Inject(DOCUMENT) private _document: Document,
-    public dato:dataService
-) { 
+    public data:dataService
+) {
     this._win = getWindow();
     console.log(this._win.initCookieConsent);
+    this.data.gui_changed$.pipe(distinctUntilChanged((prev:any,curr:any)=>{
+        return prev.layout_gui == curr.layout_gui
+        && prev.position_x_gui == curr.position_x_gui
+        && prev.position_y_gui == curr.position_y_gui
+        && prev.transition_gui == curr.transition_gui
+        && prev.layout_settings == curr.layout_settings
+        && prev.position_settings == curr.position_settings
+        && prev.transition_settings == curr.transition_settings
+    })).subscribe(gui=>{
+        this.render_censent(gui)
+    })
 }
 
-ngOnChanges() {
-    //this.v1=this.sanitizer.bypassSecurityTrustScript("console.log(123)");
-    //this.boxconsent=this.sanitizer.bypassSecurityTrustScript(`alert('bienvenue')`);
+render_censent(gui:any){
     document.querySelector("#cc_div")?.remove();
 
 
@@ -60,8 +70,8 @@ ngOnChanges() {
 
         gui_options: {
             consent_modal: {
-                layout: this.dato.layout, // box,cloud,bar
-                position: this.dato.position_y, // bottom,middle,top + left,right,center
+                layout: gui.layout_gui, // box,cloud,bar
+                position: gui.position_x_gui+ ' ' + gui.position_y_gui, // bottom,middle,top + left,right,center
                 transition: 'slide' // zoom,slide
             },
             settings_modal: {
@@ -308,8 +318,10 @@ ngOnChanges() {
     }`;
 
     //this.renderer2.appendChild(this._document.body, s); 
-    this.renderer2.appendChild(this._document.body, y); 
+    this.renderer2.appendChild(this._document.body, y);
 }
+
+
 
 
 
