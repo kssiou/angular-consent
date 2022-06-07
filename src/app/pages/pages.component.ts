@@ -9,6 +9,7 @@ import { Client } from 'src/app/client';
   styleUrls: ['./pages.component.scss']
 })
 export class PagesComponent implements OnInit ,AfterContentChecked {
+    alert: boolean =false;
   layout = '';
   position_x_gui='';
   position_y_gui='';
@@ -64,6 +65,7 @@ border-radius: .7em;
 
 
 ngAfterContentChecked(): void {
+ 
     this.data.gui_changed$.next({
         layout_gui:this.layout,
         position_y_gui:this.position_y_gui,
@@ -73,6 +75,7 @@ ngAfterContentChecked(): void {
         position_settings:this.position_settings,
         transition_settings:this.transition_settings,
        });
+
 
     this.codejs=`var cc = initCookieConsent();
     cc.run({
@@ -183,8 +186,11 @@ ngAfterContentChecked(): void {
   }
   ngOnInit(): void {
     this.getClientData();
-  }
 
+  }
+   alertfun(){
+    this.alert=true;
+        }
   getClientData() {
 
     console.log('liste des clients');
@@ -205,3 +211,4 @@ ngAfterContentChecked(): void {
   }
 
 }
+

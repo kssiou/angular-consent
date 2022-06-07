@@ -120,3 +120,31 @@ mat-form-field {
     box-shadow: 0px 3px 7px 0px rgb(0 0 0 / 20%);
     height: 2em;
 }
+
+.alert {
+    width: 700px;
+}
+
+.fa {
+    float: right;
+    padding-right: 100px;
+    padding: 10px;
+    background: #5784f5;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.fa:after {
+    content: "Copied";
+    position: absolute;
+    right: 0px;
+    background: #5c81dc;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    display: none;
+}

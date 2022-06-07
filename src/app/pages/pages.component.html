@@ -26,7 +26,10 @@
                     <mat-label>lien</mat-label>
                     <input matInput value="" name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
                 </mat-form-field>
-                <button class="btn btn-dark btn -sm mt-4">Valider</button>
+                <button class="btn btn-dark btn -sm mt-4" (click)="alertfun()">Valider</button>
+                <div *ngIf="alert" class="alert alert-success" role="alert">
+                    A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                </div>
 
             </form>
         </mat-tab>
@@ -301,8 +304,13 @@
                     <mat-card-title>code js</mat-card-title>
                     <mat-card-subtitle>
                         Vous avez terminé. Copiez votre code de consentement ci-dessous.</mat-card-subtitle>
+                    <p>1) Copiez l'extrait de code snippet ci-dessous dans le presse-papiers.</p>
+                    <p>2) Collez le code dans la section HTML de la page de votre site Web.</p>
                     <mat-card-content style="background-color:#e9ecef ; height: 100px; overflow-y:scroll;" [innerText]="codejs">
                     </mat-card-content>
+                    <button #tooltip mat-raised-button class="fa fa-clone" [cdkCopyToClipboard]="codejs">
+
+</button>
                 </mat-card>
 
             </div>
@@ -312,4 +320,4 @@
     </mat-tab-group>
 
 </div>
-<app-code-ui [item]="layout"></app-code-ui>
+<app-code-ui [item]="layout "></app-code-ui>
