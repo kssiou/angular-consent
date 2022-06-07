@@ -5,9 +5,9 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class dataService {
-layout_gui='';
-position_x_gui='';
-position_y_gui='';
+layout_gui='box';
+position_x_gui='right';
+position_y_gui='bottom';
 transition_gui='';
 layout_settings='';
 position_settings='';

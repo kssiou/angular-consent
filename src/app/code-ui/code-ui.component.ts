@@ -32,8 +32,8 @@ export class CodeUiComponent {
     console.log(this._win.initCookieConsent);
     this.data.gui_changed$.pipe(distinctUntilChanged((prev:any,curr:any)=>{
         return prev.layout_gui == curr.layout_gui
-        && prev.position_x_gui == curr.position_x_gui
         && prev.position_y_gui == curr.position_y_gui
+        && prev.position_x_gui == curr.position_x_gui
         && prev.transition_gui == curr.transition_gui
         && prev.layout_settings == curr.layout_settings
         && prev.position_settings == curr.position_settings
@@ -71,13 +71,13 @@ render_censent(gui:any){
         gui_options: {
             consent_modal: {
                 layout: gui.layout_gui, // box,cloud,bar
-                position: gui.position_x_gui+ ' ' + gui.position_y_gui, // bottom,middle,top + left,right,center
-                transition: 'slide' // zoom,slide
+                position: gui.position_y_gui+ ' ' + gui.position_x_gui??'right', // bottom,middle,top + left,right,center
+                transition: gui.transition_gui // zoom,slide
             },
             settings_modal: {
-                layout: 'cloud', // box,bar
-                // position: 'left',                // right,left (available only if bar layout selected)
-                transition: 'slide' // zoom,slide
+                layout: gui.layout_settings, // box,bar
+                 position: gui.position_settings,                // right,left (available only if bar layout selected)
+                transition: gui.transition_settings // zoom,slide
             }
         },
 

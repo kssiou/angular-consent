@@ -9,8 +9,6 @@ import { Client } from 'src/app/client';
   styleUrls: ['./pages.component.scss']
 })
 export class PagesComponent implements OnInit ,AfterContentChecked {
-  value = 'Clear me';
-
   layout = '';
   position_x_gui='';
   position_y_gui='';
@@ -19,26 +17,58 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
   position_settings='';
   transition_settings='';
   codejs!: string;
- 
+
   selectedDay:string='';
-  
-    clients:any;
-    client=new Client;
+  clients:any;
+  client=new Client;
 
   tabWay = "vert";
-  
-  
   constructor(public dataservice:DataService , public data:dataService,private cdRef: ChangeDetectorRef) {
 
    }
+   public theme=[{value:'turqoise',code:`.theme_turquoise{--cc-bg: #161a1c;--cc-text: #d8e5ea;--cc-btn-primary-bg: #60fed2;--cc-btn-primary-text: #000;--cc-btn-primary-hover-bg: #4dd4ae;--cc-btn-secondary-bg: #242c31;--cc-btn-secondary-text: var(--cc-text);--cc-btn-secondary-hover-bg: #2b353c;--cc-toggle-bg-off: #667481;--cc-toggle-bg-on: var(--cc-btn-primary-bg);--cc-toggle-bg-readonly: #343e45;--cc-toggle-knob-bg: var(--cc-cookie-category-block-bg);--cc-toggle-knob-icon-color: var(--cc-bg);--cc-cookie-category-block-bg: #1e2428;--cc-cookie-category-block-bg-hover: #242c31;--cc-section-border: #222a30;--cc-block-text: #bac9cf;--cc-cookie-table-border: #2b3035;--cc-overlay-bg: rgba(4, 6, 8, .85);--cc-webkit-scrollbar-bg: #2c343a;--cc-webkit-scrollbar-bg-hover: #384148;}.theme_turquoise .cc_div a{color: var(--cc-btn-primary-bg);}.theme_turquoise #cc_div #s-hdr{border-bottom: none;}.theme_turquoise .cc_div #c-txt{color: #b0b8c6!important;}`
+},{value:'funky',code:`.theme_funky{
+--cc-bg: #f9faff;
+--cc-text: #112954;--cc-btn-primary-bg: #3859d0;
+--cc-btn-primary-text: var(--cc-bg);
+--cc-btn-primary-hover-bg: #1d2e38;
+--cc-btn-secondary-bg: #dfe7f9;
+--cc-btn-secondary-text: var(--cc-text);
+--cc-btn-secondary-hover-bg: #c6d1ea;
+--cc-toggle-bg-off: #8fa8d6;
+--cc-toggle-bg-on: #3859d0;
+--cc-toggle-bg-readonly: #cbd8f1;
+--cc-toggle-knob-bg: #fff;
+--cc-toggle-knob-icon-color: #ecf2fa;
+--cc-block-text: var(--cc-text);
+--cc-cookie-category-block-bg: #ebeff9;
+--cc-cookie-category-block-bg-hover: #dbe5f9;
+--cc-section-border: #f1f3f5;
+--cc-cookie-table-border: #e1e7f3;
+--cc-overlay-bg: rgba(230, 235, 255, .85);
+--cc-webkit-scrollbar-bg: #ebeff9;
+--cc-webkit-scrollbar-bg-hover: #3859d0;}
+.theme_funky #c-ttl{
+color: var(--cc-btn-primary-bg);}
+
+/* Custom border radius */
+.theme_funky #cm, 
+.theme_funky #s-bl .act .b-acc, 
+.theme_funky #s-inr, 
+.theme_funky .cc_div .b-tl, 
+.theme_funky .cc_div .c-bl{
+border-radius: 1.2em;
+}.theme_funky .cc_div .c-bn{
+border-radius: .7em;
+}`}];
 
 
-   ngAfterContentChecked(): void {
-       this.data.gui_changed$.next({
+ngAfterContentChecked(): void {
+    this.data.gui_changed$.next({
         layout_gui:this.layout,
-        position_x_gui:this.position_x_gui,
         position_y_gui:this.position_y_gui,
-        transition_gui:this.position_y_gui,
+        position_x_gui:this.position_x_gui,
+        transition_gui:this.transition_gui,
         layout_settings:this.layout_settings,
         position_settings:this.position_settings,
         transition_settings:this.transition_settings,
@@ -67,14 +97,14 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
   
         gui_options: {
             consent_modal: {
-                layout: ${this.data.layout_gui}, // box,cloud,bar
-                position: ${this.data.position_x_gui} ${this.data.position_y_gui}, // bottom,middle,top + left,right,center
-                transition: ${this.data.transition_gui} // zoom,slide
+                layout: ${this.layout}, // box,cloud,bar
+                position: ${this.position_x_gui} ${this.position_y_gui}, // bottom,middle,top + left,right,center
+                transition: ${this.transition_gui} // zoom,slide
             },
             settings_modal: {
-                layout: 'cloud', // box,bar
-                // position: 'left',                // right,left (available only if bar layout selected)
-                transition: 'slide' // zoom,slide
+                layout: ${this.layout_settings}, // box,bar
+                 position:${this.position_settings},                // right,left (available only if bar layout selected)
+                transition: '${this.transition_settings} // zoom,slide
             }
         },
   
