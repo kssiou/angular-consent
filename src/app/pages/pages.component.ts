@@ -2,6 +2,8 @@ import { AfterContentChecked, ChangeDetectorRef, Component, OnChanges, OnInit, S
 import { dataService } from '../data.service';
 import { DataService } from '../service/data.service';
 import { Client } from 'src/app/client';
+import { ThisReceiver } from '@angular/compiler';
+import { Parametrage } from '../parametrage';
 
 @Component({
   selector: 'app-pages',
@@ -9,7 +11,7 @@ import { Client } from 'src/app/client';
   styleUrls: ['./pages.component.scss']
 })
 export class PagesComponent implements OnInit ,AfterContentChecked {
-    alert: boolean =false;
+   alert: boolean =false;
   layout = '';
   position_x_gui='';
   position_y_gui='';
@@ -22,6 +24,7 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
   selectedDay:string='';
   clients:any;
   client=new Client;
+  param=new Parametrage;
 
   tabWay = "vert";
   constructor(public dataservice:DataService , public data:dataService,private cdRef: ChangeDetectorRef) {
@@ -76,7 +79,13 @@ ngAfterContentChecked(): void {
         transition_settings:this.transition_settings,
        });
 
-
+    this.param.layout=this.layout;
+    this.param.layout_settings=this.layout_settings;
+    this.param.position_x_gui=this.position_x_gui;
+    this.param.position_y_gui=this.position_y_gui;
+    this.param.transition_settings=this.transition_settings;
+    this.param.transition_gui=this.transition_gui;
+    this.param.position_settings=this.position_settings;
     this.codejs=`var cc = initCookieConsent();
     cc.run({
         current_lang: 'en',
@@ -206,9 +215,18 @@ ngAfterContentChecked(): void {
     //console.log(this.product);
     this.dataservice.insertData(this.client).subscribe(res =>{
       console.log(res);
-      //this.getClientData();
+     // this.getClientData();
     })
   }
+  insertData2(){
+    //console.log('bonjour-insertion-test');
+    //console.log(this.product);
+    this.dataservice.insertData2(this.param).subscribe(res =>{
+      console.log(res);
+    //  this.getClientData();
+    })
+  }
+  
 
 }
 
