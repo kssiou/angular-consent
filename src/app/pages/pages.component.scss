@@ -170,3 +170,18 @@
     #form {
         width: 300px;
     }
+    
+    #bouton_select {
+        appearance: auto;
+        width: 50px;
+        height: 27px;
+        cursor: default;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-color: rgb(57, 57, 57);
+        border-style: solid;
+        border-image: initial;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
