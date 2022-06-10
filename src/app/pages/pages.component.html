@@ -1,14 +1,14 @@
 <h1> <b> Options</b></h1>
 <div class="wrap" [class.vert]="(tabWay=='vert') ">
     <mat-tab-group animationDuration="0ms">
-        <mat-tab label="ajouter client">
-            <h1>L'ajout d'un client </h1>
+        <mat-tab label="Ajouter le client">
+            <h1 id="texto"> <b> L'ajout d'un client </b></h1>
             <form class="example-form" (ngSubmit)="insertData()">
                 <h3 for="nomClient">Nom :
                 </h3>
-                <mat-form-field class="client" appearance="fill">
-                    <input matInput type="text" name="Nom" [(ngModel)]="client.Nom">
-                </mat-form-field>
+                
+                    <input  type="text" class="form-control " id ="form" name="Nom" [(ngModel)]="client.Nom">
+            
 
                 <h3>Nom d'entreprise</h3>
 
@@ -27,7 +27,7 @@
                     <mat-label>lien</mat-label>
                     <input matInput value="" name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
                 </mat-form-field>
-                <button class="btn btn-dark btn -sm mt-4" (click)="alertfun()">Valider</button>
+                <button class="btn btn-dark btn -sm mt-4 btn-lg" (click)="alertfun()" id="button">Envoyer</button>
                 <div *ngIf="alert" class="alert alert-success" role="alert">
                     A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
                 </div>
@@ -150,7 +150,7 @@
                                     <mat-select [(value)]="transition_gui" name="transition_gui" [(ngModel)]="param.transition_gui">
 
                                         <mat-option value="zoom">Zoom</mat-option>
-                                        <mat-option value="zlide">Slide</mat-option>
+                                        <mat-option value="slide">Slide</mat-option>
 
                                     </mat-select>
                                 </mat-form-field>
@@ -206,10 +206,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-dark btn -sm mt-4" (click)="alertfun()">Valider</button>
-                    <div *ngIf="alert" class="alert alert-success" role="alert">
-                        A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-                    </div>                </div>
+                                   </div>
             </form>
 
 
@@ -225,7 +222,7 @@
 
 
         </mat-tab>
-        <mat-tab label="text de banniere">
+        <mat-tab label="Text de bannière">
             <h1>Conception de bannière</h1>
 
             <div class="container">
@@ -258,11 +255,7 @@
 
                         </div>
                     </div>
-                    <button class="btn btn-dark btn -sm mt-4" (click)="alertfun()">Valider</button>
-                    <div *ngIf="alert" class="alert alert-success" role="alert">
-                        A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-                    </div>
-
+                   
                 </form>
 
             </div>
@@ -271,7 +264,7 @@
 
 
         </mat-tab>
-        <mat-tab label="Espace de preference">
+        <mat-tab label="Espace de préférence">
             <h1>Conception de bannière</h1>
             <mat-card>
                 <form (ngSubmit)="insertData2()">
@@ -356,6 +349,13 @@
                             <input type="text" class="form-control input-sm " name="lien2" [(ngModel)]="param.lien2">
 
                         </div>
+                        <div class="col-5 ">
+                            <h3><b>Client_id</b></h3>
+
+
+                            <input type="text" class="form-control input-sm " name="client_id" [(ngModel)]="param.client_id">
+
+                        </div>
                     </div>
                     <button class="btn btn-dark btn -sm mt-4" (click)="alertfun()">enregistrer</button>
                     <div *ngIf="alert" class="alert alert-success" role="alert">
@@ -369,7 +369,7 @@
 
 
         </mat-tab>
-        <mat-tab label="code js">
+        <mat-tab label="Code js">
             <div class="container">
 
                 <mat-card style="height:700px;">

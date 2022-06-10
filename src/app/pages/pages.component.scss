@@ -19,6 +19,7 @@ mat-form-field {
     width: 1300px;
     height: 1000px;
     margin-bottom: 1rem;
+    
     &.vert {
          ::ng-deep {
             .mat-tab-body-content {
@@ -34,6 +35,7 @@ mat-form-field {
             }
             .mat-tab-labels {
                 flex-direction: column;
+                margin-top: 10px;
             }
             .mat-tab-group {
                 flex-direction: row;
@@ -67,6 +69,7 @@ mat-form-field {
 
 .label {
     font-weight: bold;
+    
 }
 
 l #form {
@@ -147,4 +150,19 @@ mat-form-field {
     border-radius: 20px;
     font-size: 15px;
     display: none;
+}
+#texto {
+    margin-top:20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:x-large;
+} 
+#button {
+   
+    margin-bottom: -30px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+    margin-left: 20px;
+}
+#form {
+    width: 300px;
 }
