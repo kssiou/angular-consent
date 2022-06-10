@@ -38,6 +38,8 @@ export class CodeUiComponent {
         && prev.layout_settings == curr.layout_settings
         && prev.position_settings == curr.position_settings
         && prev.transition_settings == curr.transition_settings
+        && prev.theme == curr.theme
+
     })).subscribe(gui=>{
         this.render_censent(gui)
     })
@@ -293,29 +295,7 @@ render_censent(gui:any){
     `;
     */
     var y = document.createElement("style");
-    y.textContent=`:root {
-        --cc-bg: #fff;
-        --cc-text: #2d4156;
-        --cc-btn-primary-bg: #6A1FFF;
-        --cc-btn-primary-text: var(--cc-bg);
-        --cc-btn-primary-hover-bg: #6A1FFF;
-        --cc-btn-secondary-bg: #eaeff2;
-        --cc-btn-secondary-text: var(--cc-text);
-        --cc-btn-secondary-hover-bg: #d8e0e6;
-        --cc-toggle-bg-off: #919ea6;
-        --cc-toggle-bg-on: var(--cc-btn-primary-bg);
-        --cc-toggle-bg-readonly: #d5dee2;
-        --cc-toggle-knob-bg: #fff;
-        --cc-toggle-knob-icon-color: #ecf2fa;
-        --cc-block-text: var(--cc-text);
-        --cc-cookie-category-block-bg: #f0f4f7;
-        --cc-cookie-category-block-bg-hover: #e9eff4;
-        --cc-section-border: #f1f3f5;
-        --cc-cookie-table-border: #e9edf2;
-        --cc-overlay-bg: rgba(4, 6, 8, .85);
-        --cc-webkit-scrollbar-bg: #cfd5db;
-        --cc-webkit-scrollbar-bg-hover: #9199a0;
-    }`;
+    y.textContent=gui.theme;
 
     //this.renderer2.appendChild(this._document.body, s); 
     this.renderer2.appendChild(this._document.body, y);

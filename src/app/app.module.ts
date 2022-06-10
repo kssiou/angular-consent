@@ -62,6 +62,7 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 import { CodeUiComponent } from './code-ui/code-ui.component';
 import { ClientComponent } from './client/client.component';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 const appRoutes: Routes = [
   {
@@ -85,6 +86,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    ColorPickerModule,
     
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
