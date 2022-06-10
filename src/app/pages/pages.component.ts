@@ -27,8 +27,8 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
   client=new Client;
   param=new Parametrage;
   bouton_bg:string='#fff';
-  bouton_text:string=' #2d4156;';
-  bouton_color:string='blue';
+  bouton_text:string=' #2d4156';
+  bouton_color:string='#2d4156';
   bouton_hover:string='#fff';
   temp='var';
 
