@@ -26,11 +26,7 @@ export const navbarData = [
         icon: 'fas fa-ban',
         label: 'Ne vendez pas mes informations personnelles'
     },
-    {
-        routeLink: 'media',
-        icon: 'fas fa-camera',
-        label: 'Media'
-    },
+    
     {
         routeLink: 'settings',
         icon: 'fas fa-cog',

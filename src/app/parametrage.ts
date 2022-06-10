@@ -24,6 +24,7 @@ export class Parametrage {
     position_settings:any;
     transition_settings:any;
     client_id:any;
+    theme:any;
     
 }
  
