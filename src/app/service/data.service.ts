@@ -20,6 +20,10 @@ export class DataService {
  return this.httpClient.post('http://127.0.0.1:8000/api/addchoix',data3);
 }
 
+deletetData(id:any){
+  return this.httpClient.delete('http://127.0.0.1:8000/api/deleteclient/'+id);
+  
+}
 
 }
 

@@ -1,6 +1,4 @@
 <body>
-
-
     <h1> <b> Options</b></h1>
     <div class="wrap" [class.vert]="(tabWay=='vert') ">
         <mat-tab-group animationDuration="0ms">
@@ -30,13 +28,10 @@
                         <mat-label>lien</mat-label>
                         <input matInput value="" name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
                     </mat-form-field>
-                    <button class="btn btn-dark btn -sm mt-4" (click)="alertfun()">Valider</button>
-                    <div *ngIf="alert" class="alert alert-success" role="alert">
-                        A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-                    </div>
-
+                    <button class="btn btn-dark btn -sm mt-4" id="ajouter" >Ajouter</button>
+                   
                 </form>
-
+               
             </mat-tab>
 
             <mat-tab label="Conception de bannière">
@@ -56,7 +51,6 @@
                                         <mat-option value="bar">Bar</mat-option>
                                     </mat-select>
                                 </mat-form-field>
-
                             </div>
                             <div class="col-5">
                                 <h1>
@@ -151,6 +145,12 @@
 
                                         </mat-select>
                                     </mat-form-field>
+                                    
+                                    <h3 for="nomClient">Client_id:
+                                    </h3>
+                                    <mat-form-field class="client" appearance="fill">
+                                        <input matInput type="text" name="client_id" [(ngModel)]="param.client_id">
+                                    </mat-form-field>
 
                                 </div>
                             </div>
@@ -160,9 +160,9 @@
                             <div class="col-5">
                                 <h2>theme :</h2>
                             </div>
-                            <div class="col-5">
-                                <mat-button-toggle-group [(ngModel)]="param.theme" name="toggle">
-                                    <mat-button-toggle [value]="theme_dark" (click)="ToggleOff()"><span class="material-icons">nights_stay</span>Foncé</mat-button-toggle>
+                            <div class="col-5"  >
+                                <mat-button-toggle-group name="toggle" [(ngModel)]="param.theme" >
+                                    <mat-button-toggle [value]="theme_dark" (click)="ToggleOff()" ><span class="material-icons">nights_stay</span>Foncé</mat-button-toggle>
                                     <mat-button-toggle [value]="theme_light" (click)="ToggleOff()"> <span class=" material-icons ">light_mode</span>Clair</mat-button-toggle>
                                     <mat-button-toggle [value]="theme_turquoise " id="turquoise " (click)="ToggleOff() ">turquise</mat-button-toggle>
                                     <mat-button-toggle [value]="theme_light_blue " id="funky " (click)="ToggleOff() ">light funky</mat-button-toggle>
@@ -179,7 +179,7 @@
 
                             <div class="row ">
 
-                                <div class="col "><button mat-raised-button [(colorPicker)]="bouton_text" id="bouton_select" [style.background]="bouton_text " name="chosecolor1 "></button>
+                                <div class="col "><button mat-raised-button [(colorPicker)]="bouton_text" id="bouton_select" [style.background]="bouton_text " name="chosecolor1 "  ></button>
 
                                     <span class="bouton ">Couleur de text</span>
 
@@ -357,10 +357,8 @@
 
                             </div>
                         </div>
-                        <button class="btn btn-dark btn -sm mt-4 " (click)="alertfun() ">enregistrer</button>
-                        <div *ngIf="alert " class="alert alert-success " role="alert ">
-                            A simple success alert with <a href="# " class="alert-link ">an example link</a>. Give it a click if you like.
-                        </div>
+                        <button class="btn btn-dark btn -sm mt-4 ">enregistrer</button>
+                        
                     </form>
 
 

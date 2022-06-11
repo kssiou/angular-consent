@@ -1,0 +1,26 @@
+<table class="table table-bordered" >
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Nom d'entreprise</th>
+            <th scope="col">Email</th>
+            <th scope="col">Lien du site</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let clnt of clients" >
+            
+            <th scope="row">{{clnt.id}}</th>
+            <td>{{clnt.Nom}}</td>
+            <td>{{clnt.Nom_d_entreprise}}</td>
+            <td>{{clnt.Email}}</td>
+            <td>{{clnt.Lien_du_site}}</td>
+        
+            <td><button class="btn btn-danger btn-sm" (click)="deleteData(clnt.id)">Supprimer</button></td>
+            <td><button class="btn btn-warning btn-sm mx-2" routerLink="edit/{clnt.id}}">Mise à jour</button></td>
+        
+        </tr>
+    </tbody>
+</table>

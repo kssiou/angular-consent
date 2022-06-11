@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './Cookiesbar/dashboard.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from './List/Liste_clients.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CoupensComponent } from './coupens/coupens.component';
 import { PagesComponent } from './pages/pages.component';
