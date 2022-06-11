@@ -6,7 +6,7 @@ import { PagesComponent } from './pages/pages.component';
 import { ProductsComponent } from './List/Liste_clients.component';
 import { SettingsComponent } from './settings/settings.component';
 import { StatisticsComponent } from './statistics/statistics.component';
-
+import { ClientComponent } from './client/client.component';
 const routes: Routes = [
   {path: '', redirectTo: 'Cookiesbar', pathMatch: 'full'},
   {path: 'Cookiesbar', component: DashboardComponent},
@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'settings/privacy', component: StatisticsComponent},
   {path: 'settings/cdt', component: CoupensComponent},
   {path: 'pages', component: PagesComponent},
-  {path: 'settings', component: SettingsComponent}
+  {path: 'settings', component: SettingsComponent},
+  {path:'client', component:ClientComponent}
 ];
 
 @NgModule({
@@ -22,3 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents=[ClientComponent]

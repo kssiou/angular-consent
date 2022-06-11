@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -61,12 +61,15 @@ import {FormsModule} from '@angular/forms';
 
 import {RouterModule, Routes} from '@angular/router';
 import { CodeUiComponent } from './code-ui/code-ui.component';
-import { ClientComponent } from './client/client.component';
 import { ColorPickerModule } from 'ngx-color-picker';
+import { ClientEditComponent } from './client-edit/client-edit.component';
 
 const appRoutes: Routes = [
   {
     path:'', component:DashboardComponent
+  },
+  {
+    path:'edit/:id', component:ClientEditComponent
   }
   
 ]
@@ -82,7 +85,8 @@ const appRoutes: Routes = [
     PagesComponent,
     SettingsComponent,
     CodeUiComponent,
-    ClientComponent
+    routingComponents,
+    ClientEditComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,39 @@
-<p>client works!</p>
+
+<h1>L'ajout d'un client </h1>
+        <form id="form" (ngSubmit)="insertData()">
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="Nom">Nom </label>
+                <input type="text" class="form-control" id="Nom" placeholder="Nom"  name="Nom" [(ngModel)]="client.Nom" >
+              </div>
+            
+              <div class="col-md-4 mb-3">
+                <label for="Email">Email</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="Email">@</span>
+                  </div>
+                  <input type="text" class="form-control" id="Email" placeholder="Username" aria-describedby="inputGroupPrepend2" name="Email" [(ngModel)]="client.Email" >
+                </div>
+              </div>
+            </div>
+           
+              <div class="col-md-3 mb-3">
+                <label for="Nom_d_entreprise">State</label>
+                <input type="text" class="form-control" id="Nom_d_entreprise" placeholder="State" name="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="Lien_du_site">Lien du site</label>
+                <input type="text" class="form-control" id="validationDefault05" placeholder="Lien_du_site" required>
+              </div>
+          
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                  Agree to terms and conditions
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-dark btn -sm mt-4" id="ajouter"  >Ajouter</button>
+          </form>

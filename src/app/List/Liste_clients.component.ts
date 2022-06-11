@@ -16,7 +16,7 @@ a:string='cloud';
   parametrage:any;
   param=new Parametrage;
   position_x_gui='right';
-
+  
   ngOnInit(): void {
     this.getClientData();
 

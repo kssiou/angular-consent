@@ -2,37 +2,7 @@
     <h1> <b> Options</b></h1>
     <div class="wrap" [class.vert]="(tabWay=='vert') ">
         <mat-tab-group animationDuration="0ms">
-            <mat-tab label="ajouter client">
-                <h1>L'ajout d'un client </h1>
-                <form class="example-form" (ngSubmit)="insertData()">
-                    <h3 for="nomClient">Nom :
-                    </h3>
-                    <mat-form-field class="client" appearance="fill">
-                        <input matInput type="text" name="Nom" [(ngModel)]="client.Nom">
-                    </mat-form-field>
-
-                    <h3>Nom d'entreprise</h3>
-
-                    <mat-form-field class="client" appearance="fill">
-                        <input matInput value="" name="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
-                    </mat-form-field>
-
-                    <h3>Email:</h3>
-
-                    <mat-form-field class="client" appearance="fill">
-                        <input matInput value="" name="Email" [(ngModel)]="client.Email">
-                    </mat-form-field>
-                    <h3>Lien du site :</h3>
-                    <mat-form-field class="client" appearance="fill">
-
-                        <mat-label>lien</mat-label>
-                        <input matInput value="" name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
-                    </mat-form-field>
-                    <button class="btn btn-dark btn -sm mt-4" id="ajouter" >Ajouter</button>
-                   
-                </form>
-               
-            </mat-tab>
+           
 
             <mat-tab label="Conception de bannière">
                 <form (ngSubmit)="insertData2()">
@@ -146,11 +116,7 @@
                                         </mat-select>
                                     </mat-form-field>
                                     
-                                    <h3 for="nomClient">Client_id:
-                                    </h3>
-                                    <mat-form-field class="client" appearance="fill">
-                                        <input matInput type="text" name="client_id" [(ngModel)]="param.client_id">
-                                    </mat-form-field>
+                                   
 
                                 </div>
                             </div>
