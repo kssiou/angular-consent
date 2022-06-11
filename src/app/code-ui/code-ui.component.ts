@@ -39,8 +39,10 @@ export class CodeUiComponent {
         && prev.position_settings == curr.position_settings
         && prev.transition_settings == curr.transition_settings
         && prev.theme == curr.theme
+        && prev.Titre_principale == curr.Titre_principale
 
     })).subscribe(gui=>{
+        //save gui of client id
         this.render_censent(gui)
     })
 }
@@ -86,7 +88,7 @@ render_censent(gui:any){
         languages: {
             'en': {
                 consent_modal: {
-                    title: 'NOUS UTILISONS DES COOKIES',
+                    title: gui.Titre_principale??'NOUS UTILISONS DES COOKIES',
                     description: 'Notre site utilise des cookies pour garantir son bon fonctionnement et optimiser ses performances techniques, personnaliser laffichage de nos pages ou diffuser et mesurer des publicités pertinentes. Pour obtenir davantage dinformations et/ou pour modifier vos préférences, cliquez sur « <button type="button" data-cc="c-settings" class="cc-link">Changer mes préférences</button>».',
                     primary_btn: {
                         text: 'Accepter',
