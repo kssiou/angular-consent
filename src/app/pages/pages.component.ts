@@ -24,6 +24,7 @@ export class PagesComponent implements OnInit ,AfterContentChecked {
   isDisplay:boolean=false;
   selectedDay:string='';
   clients:any;
+ 
   client=new Client;
   param=new Parametrage;
   bouton_bg:string='#fff';
@@ -378,8 +379,8 @@ ToggleOff(){
     //console.log('bonjour-insertion-test');
     //console.log(this.product);
     this.dataservice.insertData(this.client).subscribe(res =>{
-      console.log(res);
-     // this.getClientData();
+      //console.log(res);
+      this.getClientData();
     })
   }
   insertData2(){
@@ -390,7 +391,15 @@ ToggleOff(){
     //  this.getClientData();
     })
   }
-  
+  deleteData(id:any){
+    //console.log(id);
+    this.dataservice.deletetData(id).subscribe(res =>{
+      //console.log(res);
+      this.getClientData();
+    })
+
+  }
+
 
 }
 
