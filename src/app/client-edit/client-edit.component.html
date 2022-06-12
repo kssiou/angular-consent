@@ -1,1 +1,32 @@
-<p>client-edit works!</p>
+
+<h1>L'ajout d'un client </h1>
+<form  (ngSubmit)="updateClient()">
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="Nom">Nom </label>
+        <input type="text" class="form-control" id="Nom" placeholder="Nom"  name="Nom" [(ngModel)]="client.Nom" >
+      </div>
+    
+      <div class="col-md-4 mb-3">
+        <label for="Email">Email</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="Email">@</span>
+          </div>
+          <input type="text" class="form-control" id="Email" placeholder="Username" aria-describedby="inputGroupPrepend2" name="Email" [(ngModel)]="client.Email" >
+        </div>
+      </div>
+    </div>
+   
+      <div class="col-md-3 mb-3">
+        <label for="Nom_d_entreprise">Nom d'entreprise</label>
+        <input type="text" class="form-control" id="Nom_d_entreprise" placeholder="Nom_d_entreprise" name="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="Lien_du_site">Lien du site</label>
+        <input type="text" class="form-control" id="Lien_du_site" placeholder="Lien_du_site" name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
+      </div>
+
+      <button class="btn btn-dark btn -sm mt-4">Mise à jour</button>
+    </form>
+    

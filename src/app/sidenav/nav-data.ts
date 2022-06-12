@@ -7,7 +7,7 @@ export const navbarData = [
         
     },
     {
-        routeLink: 'Liste_clients',
+        routeLink: 'List',
         icon: 'fas fa-box-open',
         label: 'Politiques juridiques'
     },
