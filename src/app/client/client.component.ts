@@ -11,7 +11,7 @@ import { Client } from 'src/app/client';
 export class ClientComponent implements OnInit {
   client=new Client;
   clients: any;
-
+  
   constructor(public dataservice:DataService) { }
   insertData(){
     //console.log('bonjour-insertion-test');
@@ -33,6 +33,7 @@ export class ClientComponent implements OnInit {
   }
   ngOnInit(): void {
      this.getClientData();
+     
   }
 
 }

@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Client } from '../client';
 import { dataService } from '../data.service';
-import { Parametrage } from '../parametrage';
 
 import { DataService } from '../service/data.service';
+
 @Component({
-  selector: 'app-products',
+  selector: 'app-List',
   templateUrl: './Liste_clients.component.html',
   styleUrls: ['./Liste_clients.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ListComponent implements OnInit {
 a:string='cloud';
-  constructor(public dato: dataService,public dataservice:DataService ) {  }
+  constructor(public dato: dataService,public dataservice:DataService,private router:Router ) {  }
   clients:any;
-  client:any;
+  client=new Client;
   parametrage:any;
-  param=new Parametrage;
-  position_x_gui='right';
+  
   
   ngOnInit(): void {
     this.getClientData();
@@ -25,7 +26,7 @@ a:string='cloud';
   getClientData() {
 
     console.log('liste des clients');
-    console.log(this.position_x_gui)
+    
     this.dataservice.getData().subscribe(res =>{
       console.log(res);
       this.clients=res;

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
@@ -7,7 +8,7 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './Cookiesbar/dashboard.component';
-import { ProductsComponent } from './List/Liste_clients.component';
+import { ListComponent } from './List/Liste_clients.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CoupensComponent } from './coupens/coupens.component';
 import { PagesComponent } from './pages/pages.component';
@@ -63,6 +64,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { CodeUiComponent } from './code-ui/code-ui.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { ClientEditComponent } from './client-edit/client-edit.component';
+import { ClientComponent } from './client/client.component';
 
 const appRoutes: Routes = [
   {
@@ -70,7 +72,14 @@ const appRoutes: Routes = [
   },
   {
     path:'edit/:id', component:ClientEditComponent
-  }
+  },
+
+  {
+    path:'List', component:ListComponent
+  },
+  
+  
+  
   
 ]
 @NgModule({
@@ -79,7 +88,7 @@ const appRoutes: Routes = [
     BodyComponent,
     SidenavComponent,
     DashboardComponent,
-    ProductsComponent,
+    ListComponent,
     StatisticsComponent,
     CoupensComponent,
     PagesComponent,
