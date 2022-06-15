@@ -2,7 +2,7 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
     <div class="logo-container">
         <img src="assets/images/icon.png" class="logo" (click)="toggleCollapse()" style="width:50px">
-        <div class="logo-text" @fadeInOut *ngIf="collapsed">Mobiletic</div>
+        <div class="logo-text" @fadeInOut *ngIf="collapsed">CGCU</div>
         <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
             <i class="fal fa-times close-icon"></i>
         </button>
@@ -19,13 +19,13 @@
         </li>
     </ul>
 </div> 
-<div id="nav" >
+<div id="nav">
     <nav class="navbar navbar-light bg-red" id="mobiletic" >
 
         <a class="navbar-brand"  >
             
             <div class="nine">
-                <h1>Centre de consentement<span>Mobiletic</span></h1>
+                <h1 style="font-size:27px"> <strong>Centre de consentement</strong> <span>Mobiletic</span></h1>
               </div>
 
         </a>

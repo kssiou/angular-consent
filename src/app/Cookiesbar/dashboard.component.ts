@@ -8,7 +8,9 @@ import { Client } from 'src/app/client';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-selectedDay:string='';
+selectedDay:string=''; 
+ tabWay = "vert";
+
 //
 
   clients:any;

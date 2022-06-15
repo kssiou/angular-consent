@@ -1,5 +1,14 @@
 <body>
-    <h1> <b> Options</b></h1>
+    
+<div  > <img src="assets/images/gif-unscreen.gif" style=" margin-left:-100px; margin-top: -130px ; "></div>
+<br>
+   <div style=" margin-top: -250px;">
+        
+    <h1 style="margin-left:290px;color: rgba(0, 31, 207, 0.459);  font-size: 2rem ;font-family: fangsong; " >  <strong>
+        Vous ne pensez pas  créer votre bannière de cookies ?</strong> 
+    </h1> <br>
+       <h2  style="margin-left:420px;color: rgba(5, 193, 226, 0.692);  font-size: 2.3rem ;font-family:  Ink Free, Times, serif; margin-top: -10px;"> Vous pouvez commencer <i class="fa-solid fa-face-laugh-beam"></i></h2>    </div>
+       <div ><img src="assets/images/cookisa-unscreen.gif" style="margin-left:1000px; margin-top:-170px ;width: 270px;"></div>
     <div class="wrap" [class.vert]="(tabWay=='vert') ">
         <mat-tab-group animationDuration="0ms">
            
@@ -9,12 +18,12 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-5">
-                                <h1> Interface principale</h1>
-                                <h4>Changez le design d'interface principale de bannière.</h4>
+                                <h1> <b>La façade principale </b> </h1>
+                                <h4 style="color:blue;">Changez le design d'interface principale de bannière.</h4>
                                 <h3 class="label">Layout</h3>
 
                                 <mat-form-field>
-                                    <mat-label style="color:rgb(75, 74, 74)"> <b>Layout</b> </mat-label>
+                                    <mat-label style="color:blue"> <b>Layout</b> </mat-label>
                                     <mat-select [(value)]="layout" name="layout" [(ngModel)]="param.layout">
                                         <mat-option value="box">Box</mat-option>
                                         <mat-option value="cloud">Cloud</mat-option>
@@ -24,13 +33,13 @@
                             </div>
                             <div class="col-5">
                                 <h1>
-                                    Espace de preferance
+                                <b> Espace de preferance</b>   
                                 </h1>
-                                <h4>Changez le design d'expace de preference de bannière.</h4>
-                                <h3 class="label">Layout :</h3>
+                                <h4 style="color:blue;">Changez le design d'expace de preference de bannière.</h4>
+                                <h3 class="label">Layout </h3>
 
                                 <mat-form-field>
-                                    <mat-label style="color:rgb(75, 74, 74)"> <b>Layout</b> </mat-label>
+                                    <mat-label style="color:blue"> <b>Layout</b> </mat-label>
                                     <mat-select [(value)]="layout_settings" name="layout_settings" [(ngModel)]="param.layout_settings">
 
                                         <mat-option value="box">Box</mat-option>
@@ -43,7 +52,7 @@
                                     <h3 class="label">Position_y :</h3>
 
                                     <mat-form-field>
-                                        <mat-label style="color:rgb(75, 74, 74)"> <b>Position y :</b> </mat-label>
+                                        <mat-label style="color:blue"> <b>Position_y :</b> </mat-label>
 
                                         <mat-select [(value)]="position_y_gui" name="position_y_gui" [(ngModel)]="param.position_y_gui">
                                             <mat-option value="bottom">Bottom</mat-option>
@@ -57,7 +66,7 @@
                                     <h3 class="label">Position_x :</h3>
 
                                     <mat-form-field>
-                                        <mat-label style="color:rgb(75, 74, 74)"> <b>Position_x :</b> </mat-label>
+                                        <mat-label style="color:blue"> <b>Position_x :</b> </mat-label>
                                         <mat-select [(value)]="position_settings" name="position_settings" [(ngModel)]="param.position_settings">
 
                                             <mat-option value="left">Left</mat-option>
@@ -74,7 +83,7 @@
                                     <h3 class="label">Position_x :</h3>
 
                                     <mat-form-field>
-                                        <mat-label style="color:rgb(75, 74, 74)"> <b>Position_x</b> </mat-label>
+                                        <mat-label style="color:blue"> <b>Position_x</b> </mat-label>
 
                                         <mat-select [(value)]="position_x_gui" name="position_x_gui" [(ngModel)]="param.position_x_gui">
                                             <mat-option value="left">Left</mat-option>
@@ -84,10 +93,10 @@
                                     </mat-form-field>
                                 </div>
                                 <div class="col-5">
-                                    <h3 class="label">transition :</h3>
+                                    <h3 class="label">Transition :</h3>
 
                                     <mat-form-field>
-                                        <mat-label style="color:rgb(75, 74, 74)"> <b>transition</b> </mat-label>
+                                        <mat-label style="color:blue"> <b>transition</b> </mat-label>
 
                                         <mat-select [(value)]="transition_settings" name="transition_settings" [(ngModel)]="param.transition_settings">
                                             <mat-option value="zoom">Zoom</mat-option>
@@ -106,7 +115,7 @@
                                     <h3 class="label">Transition :</h3>
 
                                     <mat-form-field>
-                                        <mat-label style="color:rgb(75, 74, 74)"> <b>Transition</b> </mat-label>
+                                        <mat-label style="color:blue"> <b>Transition</b> </mat-label>
 
                                         <mat-select [(value)]="transition_gui" name="transition_gui" [(ngModel)]="param.transition_gui">
 
@@ -124,15 +133,15 @@
                         </div>
                         <div class="row">
                             <div class="col-5">
-                                <h2>theme :</h2>
+                                <h2><b>Thème de bannière :</b></h2>
                             </div>
-                            <div class="col-5"  >
+                            <div class="col-5" style="margin-left:-110px;" >
                                 <mat-button-toggle-group name="toggle" [(ngModel)]="param.theme" >
                                     <mat-button-toggle [value]="theme_dark" (click)="ToggleOff()" ><span class="material-icons">nights_stay</span>Foncé</mat-button-toggle>
                                     <mat-button-toggle [value]="theme_light" (click)="ToggleOff()"> <span class=" material-icons ">light_mode</span>Clair</mat-button-toggle>
-                                    <mat-button-toggle [value]="theme_turquoise " id="turquoise " (click)="ToggleOff() ">turquise</mat-button-toggle>
-                                    <mat-button-toggle [value]="theme_light_blue " id="funky " (click)="ToggleOff() ">light funky</mat-button-toggle>
-                                    <mat-button-toggle [value]="personnalise " id="personnalisé " (click)="ToggleOn() ">personnalisé</mat-button-toggle>
+                                    <mat-button-toggle [value]="theme_turquoise " id="turquoise " (click)="ToggleOff() ">Turquois</mat-button-toggle>
+                                    <mat-button-toggle [value]="theme_light_blue " id="funky " (click)="ToggleOff() ">Léger funky</mat-button-toggle>
+                                    <mat-button-toggle [value]="personnalise " id="personnalisé " (click)="ToggleOn() ">Personnalisé</mat-button-toggle>
 
 
                                 </mat-button-toggle-group>
@@ -195,35 +204,35 @@
 
 
             </mat-tab>
-            <mat-tab label="text de banniere ">
+            <mat-tab label="Texte de banniere ">
                 <h1>Conception de bannière</h1>
 
                 <div class="container ">
                     <form>
                         <div class="row ">
                             <div class="col-5 ">
-                                <h3> <b>Titre Principal:</b> </h3>
+                                <h3> <b>Titre principal:</b> </h3>
 
-                                <input type="text " class="form-control " id=" " name="Titre_principale " [(ngModel)]="param.Titre_principale ">
+                                <input type="text " placeholder="Titre principal" class="form-control " id=" " name="Titre_principale " [(ngModel)]="param.Titre_principale ">
                             </div>
                             <div class="col-5 ">
-                                <h3> <b>Description:</b> </h3>
-
-                                <input type="text " class="form-control " id=" " name="Description " [(ngModel)]="param.Description ">
+                                <h3  > <b>Description:</b> </h3>
+                               
+                                <textarea class="form-control" placeholder="Description" id="form4Example3" rows="4"  type="text " id=" " name="Description " [(ngModel)]="param.Description  "></textarea>
 
                             </div>
                         </div>
                         <div class="row ">
                             <div class="col-5 ">
                                 <h3> <b>Nom du lien :</b> </h3>
-                                <input type="text " class="form-control " id=" " name="Nom_du_lien " [(ngModel)]="param.Nom_du_lien ">
+                                <input type="text " placeholder="Nom du lien" class="form-control " id=" " name="Nom_du_lien " [(ngModel)]="param.Nom_du_lien ">
 
                             </div>
                             <div class="col-5 ">
                                 <h3> <b>Lien : </b> </h3>
 
 
-                                <input type="text " class="form-control input-sm " id=" " name="Lien " [(ngModel)]="param.Lien ">
+                                <input type="text " placeholder="Lien" class="form-control input-sm " id=" " name="Lien " [(ngModel)]="param.Lien ">
 
                             </div>
                         </div>
@@ -237,7 +246,7 @@
 
 
             </mat-tab>
-            <mat-tab label="Espace de preference ">
+            <mat-tab label="Espace de préférence ">
                 <h1>Conception de bannière</h1>
                 <mat-card>
                     <form (ngSubmit)="insertData2() ">
@@ -245,81 +254,80 @@
                             <div class="col-5 ">
                                 <h3> <b>Titre principal :</b> </h3>
 
-                                <input type="text " class="form-control " name="Titre_principal2 " [(ngModel)]="param.Titre_principal2 ">
+                                <input type="text " class="form-control " placeholder="Titre principal" name="Titre_principal2 " [(ngModel)]="param.Titre_principal2 ">
 
                             </div>
                             <div class="col-5 ">
                                 <h3> <b> Titre de description :</b></h3>
 
-                                <input type="text " class="form-control " name=" Titre_description " [(ngModel)]="param.Titre_description ">
+                                <input type="text " class="form-control " placeholder="Titre de description" name=" Titre_description " [(ngModel)]="param.Titre_description ">
 
                             </div>
                             <div class="col-5 ">
                                 <h3> <b> Description :</b></h3>
 
-                                <input type="text " class="form-control " name="Description2 " [(ngModel)]="param.Description2 ">
+                                <textarea  placeholder="Description"  style="margin-left:2px; width :779px"  class="form-control" id="form4Example3" rows="4"  type="text " name="Description2 " [(ngModel)]="param.Description2 "></textarea>
 
                             </div>
                         </div>
                         <div class="row ">
                             <div class="col-5 ">
                                 <h3> <b>Traceur 1 :</b></h3>
-                                <input type="text " class="form-control " name="Traceur_1 " [(ngModel)]="param.Traceur_1 ">
+                                <input  placeholder="Traceur 1" type="text " class="form-control " name="Traceur_1 " [(ngModel)]="param.Traceur_1 ">
 
                             </div>
                             <div class="col-5 ">
                                 <h3><b>Desciprtion :</b></h3>
 
-
-                                <input type="text " class="form-control input-sm " name="Description_traceur1 " [(ngModel)]="param.Description_traceur1 ">
+                        <textarea class="form-control" id="form4Example3" placeholder="Description" rows="4"  type="text " class="form-control input-sm " name="Description_traceur1 " [(ngModel)]="param.Description_traceur1 "></textarea>
 
                             </div>
                             <div class="col-5 ">
                                 <h3> <b>Traceur 2 :</b></h3>
-                                <input type="text " class="form-control " name=" Traceur_2 " [(ngModel)]="param.Traceur_2 ">
+                                <input type="text " class="form-control " placeholder="Traceur 2" name=" Traceur_2 " [(ngModel)]="param.Traceur_2 ">
 
                             </div>
                             <div class="col-5 ">
                                 <h3><b>Desciprtion :</b></h3>
 
 
-                                <input type="text " class="form-control input-sm " name="Description_traceur2 " [(ngModel)]="param.Description_traceur2 ">
+                                <textarea class="form-control" id="form4Example3" placeholder="Description" rows="4" type="text " class="form-control input-sm " name="Description_traceur2 " [(ngModel)]="param.Description_traceur2 "></textarea>
 
                             </div>
                             <div class="col-5 ">
                                 <h3> <b>Traceur 3 :</b></h3>
-                                <input type="text " class="form-control " name="Traceur_3 " [(ngModel)]="param.Traceur_3 ">
+                                <input type="text " class="form-control " placeholder="Traceur 3" name="Traceur_3 " [(ngModel)]="param.Traceur_3 ">
 
                             </div>
                             <div class="col-5 ">
                                 <h3><b>Desciprtion :</b></h3>
 
 
-                                <input type="text " class="form-control input-sm " name="Description_traceur3 " [(ngModel)]="param.Description_traceur3 ">
+                                <textarea class="form-control" id="form4Example3" placeholder="Description" rows="4"  name="Description_traceur3 " [(ngModel)]="param.Description_traceur3 "></textarea>
 
                             </div>
                             <div class="col-5 ">
                                 <h3> <b>Tite d'information :</b></h3>
-                                <input type="text " class="form-control " name="Titre_information " [(ngModel)]="param.Titre_information ">
+                                <input type="text " class="form-control " placeholder="Titre d'information " name="Titre_information " [(ngModel)]="param.Titre_information ">
 
                             </div>
                             <div class="col-5 ">
                                 <h3><b>Description :</b></h3>
 
 
-                                <input type="text " class="form-control input-sm " name="Description_information " [(ngModel)]="param.Description_information ">
+                                <textarea class="form-control" placeholder="Description" id="form4Example3" rows="4" type="text"  name="Description_information " [(ngModel)]="param.Description_information "></textarea>
 
                             </div>
                             <div class="col-5 ">
                                 <h3> <b>Nom du lien :</b></h3>
-                                <input type="text " class="form-control " name="Nom_lien " [(ngModel)]="param.Nom_lien ">
+                                <input type="text " class="form-control " placeholder="Nom du lien" name="Nom_lien " [(ngModel)]="param.Nom_lien ">
 
                             </div>
                             <div class="col-5 ">
                                 <h3><b>Lien:</b></h3>
 
 
-                                <input type="text " class="form-control input-sm " name="lien2 " [(ngModel)]="param.lien2 ">
+                                <input type="text " placeholder="Lien" class="form-control input-sm " name="lien2 " [(ngModel)]="param.lien2 ">
 
                             </div>
                         </div>
@@ -333,7 +341,7 @@
 
 
             </mat-tab>
-            <mat-tab label="code js ">
+            <mat-tab label="Code js ">
                 <div class="container ">
 
                     <mat-card style="height:700px; ">
