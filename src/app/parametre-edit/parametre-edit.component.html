@@ -127,7 +127,7 @@
                                 <h2>theme :</h2>
                             </div>
                             <div class="col-5">
-                                <mat-button-toggle-group name="toggle" [(ngModel)]="param.theme">
+                                <mat-button-toggle-group name="theme" [(ngModel)]="param.theme">
                                     <mat-button-toggle [value]="theme_dark" (click)="ToggleOff()"><span class="material-icons">nights_stay</span>Foncé</mat-button-toggle>
                                     <mat-button-toggle [value]="theme_light" (click)="ToggleOff()"> <span class=" material-icons ">light_mode</span>Clair</mat-button-toggle>
                                     <mat-button-toggle [value]="theme_turquoise " id="turquoise " (click)="ToggleOff() ">turquise</mat-button-toggle>
@@ -208,8 +208,7 @@
                             </div>
                             <div class="col-5 ">
                                 <h3> <b>Description:</b> </h3>
-
-                                <input type="text " class="form-control " id=" " name="Description " [(ngModel)]="param.Description ">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Description" [(ngModel)]="param.Description"></textarea>
 
                             </div>
                         </div>
@@ -240,7 +239,7 @@
             <mat-tab label="Espace de preference ">
                 <h1>Conception de bannière</h1>
                 <mat-card>
-                    <form (ngSubmit)="insertData2() ">
+                    <form>
                         <div class="row ">
                             <div class="col-5 ">
                                 <h3> <b>Titre principal :</b> </h3>
@@ -251,13 +250,15 @@
                             <div class="col-5 ">
                                 <h3> <b> Titre de description :</b></h3>
 
-                                <input type="text " class="form-control " name=" Titre_description " [(ngModel)]="param.Titre_description ">
+                                <textarea class="form-control" id="" rows="3" name="Titre_description" [(ngModel)]="param.Titre_description"></textarea>
+
+
 
                             </div>
                             <div class="col-5 ">
                                 <h3> <b> Description :</b></h3>
 
-                                <input type="text " class="form-control " name="Description2 " [(ngModel)]="param.Description2 ">
+                                <textarea class="form-control " id=" " rows="3 " name="Description2 " [(ngModel)]="param.Description2 "></textarea>
 
                             </div>
                         </div>
@@ -268,10 +269,11 @@
 
                             </div>
                             <div class="col-5 ">
-                                <h3><b>Desciprtion :</b></h3>
+                                <h3><b>Desciprtion 1:</b></h3>
 
 
-                                <input type="text " class="form-control input-sm " name="Description_traceur1 " [(ngModel)]="param.Description_traceur1 ">
+
+                                <textarea class="form-control " id=" " rows="3 " name="Description_traceur1 " [(ngModel)]="param.Description_traceur1 "></textarea>
 
                             </div>
                             <div class="col-5 ">
@@ -280,10 +282,11 @@
 
                             </div>
                             <div class="col-5 ">
-                                <h3><b>Desciprtion :</b></h3>
+                                <h3><b>Description 2:</b></h3>
 
 
-                                <input type="text " class="form-control input-sm " name="Description_traceur2 " [(ngModel)]="param.Description_traceur2 ">
+
+                                <textarea class="form-control " id=" " rows="3 " name="Description_traceur2 " [(ngModel)]="param.Description_traceur2 "></textarea>
 
                             </div>
                             <div class="col-5 ">
@@ -292,11 +295,10 @@
 
                             </div>
                             <div class="col-5 ">
-                                <h3><b>Desciprtion :</b></h3>
+                                <h3><b>Description 3:</b></h3>
 
 
-                                <input type="text " class="form-control input-sm " name="Description_traceur3 " [(ngModel)]="param.Description_traceur3 ">
-
+                                <textarea class="form-control " id=" " rows="3 " name="Description_traceur3 " [(ngModel)]="param.Description_traceur3 "></textarea>
                             </div>
                             <div class="col-5 ">
                                 <h3> <b>Tite d'information :</b></h3>
@@ -307,7 +309,7 @@
                                 <h3><b>Description :</b></h3>
 
 
-                                <input type="text " class="form-control input-sm " name="Description_information " [(ngModel)]="param.Description_information ">
+                                <textarea class="form-control " id=" " rows="3 " name="Description_traceur2 " [(ngModel)]="param.Description_traceur2 "></textarea>
 
                             </div>
                             <div class="col-5 ">
@@ -321,9 +323,9 @@
 
                                 <input type="text " class="form-control input-sm " name="lien2 " [(ngModel)]="param.lien2 ">
 
+
                             </div>
                         </div>
-                        <button class="btn btn-dark btn -sm mt-4 ">enregistrer</button>
 
                     </form>
 
@@ -335,25 +337,23 @@
             </mat-tab>
             <mat-tab label="code js ">
                 <div class="container ">
+                    <form>
 
-                    <mat-card style="height:700px; ">
-                        <mat-card-title>code js</mat-card-title>
-                        <mat-card-subtitle>
-                            Vous avez terminé. Copiez votre code de consentement ci-dessous.</mat-card-subtitle>
-                        <p>1) Copiez l'extrait de code snippet ci-dessous dans le presse-papiers.</p>
-                        <p>2) Collez le code dans la section HTML de la page de votre site Web.</p>
-                        <mat-card-content style="background-color:#e9ecef ; height: 100px; overflow-y:scroll; " [innerText]="codejs ">
-                        </mat-card-content>
-                        <button #tooltip mat-raised-button class="fa fa-clone " [cdkCopyToClipboard]="codejs ">
-
-</button>
-                    </mat-card>
-
+                        <mat-card style="height:700px; ">
+                            <mat-card-title>code js</mat-card-title>
+                            <mat-card-subtitle>
+                                Vous avez terminé. Copiez votre code de consentement ci-dessous.</mat-card-subtitle>
+                            <p>1) Copiez l'extrait de code snippet ci-dessous dans le presse-papiers.</p>
+                            <p>2) Collez le code dans la section HTML de la page de votre site Web.</p>
+                            <mat-card-content style="background-color:#e9ecef ; height: 100px; overflow-y:scroll; " [innerText]="param.codejs ">
+                            </mat-card-content>
+                            <button #tooltip mat-raised-button class="fa fa-clone " [cdkCopyToClipboard]="param.codejs "></button>
+                            <button type="submit " (ngSubmit)="updateChoix() " class=" btn btn-dark btn -sm mt-4 " routerLink="/List/ ">enregistrer</button>
+                        </mat-card>
+                    </form>
                 </div>
-
             </mat-tab>
-
         </mat-tab-group>
-
     </div>
+    <app-code-ui></app-code-ui>
 </body>

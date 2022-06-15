@@ -8,6 +8,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { ClientComponent } from './client/client.component';
 import { ClientEditComponent } from './client-edit/client-edit.component';
+import { ParametreEditComponent } from './parametre-edit/parametre-edit.component';
+
 const routes: Routes = [
   {path: '', redirectTo: 'Cookiesbar', pathMatch: 'full'},
   {path: 'Cookiesbar', component: DashboardComponent},
@@ -18,6 +20,9 @@ const routes: Routes = [
   {path: 'settings', component: SettingsComponent},
   {path:'client', component:ClientComponent},
   {path:'List', component:ListComponent},
+  {path:'choix', component:ClientEditComponent},
+  {path:'editchoix', component:ParametreEditComponent}
+
 
 
 ];

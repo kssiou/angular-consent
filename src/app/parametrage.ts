@@ -23,9 +23,7 @@ export class Parametrage {
     layout_settings:any;
     position_settings:any;
     transition_settings:any;
-    
     theme:any;
-    
+    codejs:any;
 }
- 
-         
+

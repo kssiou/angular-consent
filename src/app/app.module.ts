@@ -65,6 +65,9 @@ import { CodeUiComponent } from './code-ui/code-ui.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ClientComponent } from './client/client.component';
+import { ParametreCrudComponent } from './parametre-crud/parametre-crud.component';
+import { ParametreEditComponent } from './parametre-edit/parametre-edit.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -77,13 +80,16 @@ const appRoutes: Routes = [
   {
     path:'List', component:ListComponent
   },
-  
-  
-  
-  
+  {
+    path:'afficherchoix/:id', component:ParametreCrudComponent
+  }
+  ,
+  {
+    path:'editchoix/:id', component:ParametreEditComponent
+  }
 ]
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     BodyComponent,
     SidenavComponent,
@@ -96,7 +102,10 @@ const appRoutes: Routes = [
     CodeUiComponent,
     routingComponents,
     ClientEditComponent,
-  ],
+    ParametreCrudComponent,
+      ParametreEditComponent,
+      HeroDetailComponent
+   ],
   imports: [
     BrowserModule,
     ColorPickerModule,

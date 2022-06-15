@@ -39,7 +39,31 @@ export class CodeUiComponent {
         && prev.position_settings == curr.position_settings
         && prev.transition_settings == curr.transition_settings
         && prev.theme == curr.theme
+        &&  prev.Titre_principal2== curr.Titre_principal2
         && prev.Titre_principale == curr.Titre_principale
+        && prev.layout_gui==curr.layout_gui
+        && prev.position_x_gui==curr.position_x_gui
+        && prev.transition_gui==curr.transition_gui
+        && prev.layout_settings==curr.layout_settings
+        && prev.position_settings==curr.position_settings
+        && prev.transition_settings==curr.transition_settings
+        && prev.Titre_description==curr.Titre_description
+        && prev.theme==curr.theme
+        && prev.Titre_principale==curr.Titre_principale
+        && prev.Description==curr.Description
+        && prev.Nom_du_lien ==curr.Nom_du_lien
+        && prev.Lien ==curr.Lien
+        && prev.Description2==curr.Description2
+        && prev.Traceur_1==curr.Traceur_1
+        && prev.Description_traceur1==curr.Description_traceur1
+        && prev.Traceur_2==curr.Traceur_2
+        && prev.Description_traceur2==curr.Description_traceur2
+        && prev.Traceur_3==curr.Traceur_3
+        && prev.Description_traceur3==curr.Description_traceur3
+        && prev.Titre_information==curr.Titre_information
+        && prev.Description_information==curr.Description_information
+        && prev.Nom_lien==curr.Nom_lien
+    && prev.lien2==curr.lien2
 
     })).subscribe(gui=>{
         //save gui of client id
@@ -89,7 +113,7 @@ render_censent(gui:any){
             'en': {
                 consent_modal: {
                     title: gui.Titre_principale??'NOUS UTILISONS DES COOKIES',
-                    description: 'Notre site utilise des cookies pour garantir son bon fonctionnement et optimiser ses performances techniques, personnaliser laffichage de nos pages ou diffuser et mesurer des publicités pertinentes. Pour obtenir davantage dinformations et/ou pour modifier vos préférences, cliquez sur « <button type="button" data-cc="c-settings" class="cc-link">Changer mes préférences</button>».',
+                    description: gui.Description??'Notre site utilise des cookies pour garantir son bon fonctionnement et optimiser ses performances techniques, personnaliser laffichage de nos pages ou diffuser et mesurer des publicités pertinentes. Pour obtenir davantage dinformations et/ou pour modifier vos préférences, cliquez sur « <button type="button" data-cc="c-settings" class="cc-link">Changer mes préférences</button>».',
                     primary_btn: {
                         text: 'Accepter',
                         role: 'accept_all' // 'accept_selected' or 'accept_all'
@@ -100,7 +124,7 @@ render_censent(gui:any){
                     }
                 },
                 settings_modal: {
-                    title: 'ESPACE DE PRÉFÉRENCES DES COOKIES',
+                    title:gui.Titre_principal2 ??'ESPACE DE PRÉFÉRENCES DES COOKIES',
                     save_settings_btn: 'Valider mes choix',
                     accept_all_btn: 'Tout accepter',
                     reject_all_btn: 'Tout refuser',
@@ -115,19 +139,19 @@ render_censent(gui:any){
                         col4: 'Description'
                     }],
                     blocks: [{
-                        title: 'Votre confidentialité est importante pour nous',
-                        description: 'Les cookies sont de très petits fichiers texte qui sont stockés sur votre ordinateur lorsque vous visitez un site Web. Nous utilisons des cookies à diverses fins et pour améliorer votre expérience en ligne sur notre site Web (par exemple, pour mémoriser les informations de connexion de votre compte).Vous pouvez modifier vos préférences et refuser lenregistrement de certains types de cookies sur votre ordinateur lors de la navigation sur notre site. Vous pouvez également supprimer les cookies déjà stockés sur votre ordinateur, mais gardez à lesprit que leur suppression peut vous empêcher d utiliser des éléments de notre site Web.'
+                        title:gui.Titre_description??'Votre confidentialité est importante pour nous',
+                        description:gui.Description2??'Les cookies sont de très petits fichiers texte qui sont stockés sur votre ordinateur lorsque vous visitez un site Web. Nous utilisons des cookies à diverses fins et pour améliorer votre expérience en ligne sur notre site Web (par exemple, pour mémoriser les informations de connexion de votre compte).Vous pouvez modifier vos préférences et refuser lenregistrement de certains types de cookies sur votre ordinateur lors de la navigation sur notre site. Vous pouvez également supprimer les cookies déjà stockés sur votre ordinateur, mais gardez à lesprit que leur suppression peut vous empêcher d utiliser des éléments de notre site Web.'
                     }, {
-                        title: 'Strictement nécessaires cookies',
-                        description: 'Ces cookies ne concernent que le fonctionnement de notre site. Ils sont essentiels et nécessaires pour assurer le fonctionnement optimal de notre site, et pour vous permettre d’utiliser ses services et fonctionnalités. Sans ces cookies qui sont absolument nécessaires, notre site ne fonctionnera pas aussi bien que nous le souhaitons. Nous serions alors dans l’incapacité de fournir le site ou certains services ou fonctionnalités demandés.',
+                        title: gui.Traceur_1??'Strictement nécessaires cookies',
+                        description: gui.Description_traceur1??'Ces cookies ne concernent que le fonctionnement de notre site. Ils sont essentiels et nécessaires pour assurer le fonctionnement optimal de notre site, et pour vous permettre d’utiliser ses services et fonctionnalités. Sans ces cookies qui sont absolument nécessaires, notre site ne fonctionnera pas aussi bien que nous le souhaitons. Nous serions alors dans l’incapacité de fournir le site ou certains services ou fonctionnalités demandés.',
                         toggle: {
                             value: 'necessary',
                             enabled: true,
                             readonly: true // cookie categories with readonly=true are all treated as "necessary cookies"
                         }
                     }, {
-                        title: 'Performance et Statistiques ',
-                        description: 'Ces cookies nous permettent de suivre l’activité du site, d’établir des statistiques de fréquentation et d’utilisation des divers éléments composant notre site (rubriques et contenus visité, parcours, …), afin d’en améliorer l’intérêt, l’ergonomie et la performance en fonction de l’utilisation réelle. Ces données sont recueillies de manière anonyme.',
+                        title: gui.Traceur_2??'Performance et Statistiques ',
+                        description: gui.Description_traceur2??'Ces cookies nous permettent de suivre l’activité du site, d’établir des statistiques de fréquentation et d’utilisation des divers éléments composant notre site (rubriques et contenus visité, parcours, …), afin d’en améliorer l’intérêt, l’ergonomie et la performance en fonction de l’utilisation réelle. Ces données sont recueillies de manière anonyme.',
                         toggle: {
                             value: 'analytics', // there are no default categories => you specify them
                             enabled: false,
@@ -146,8 +170,8 @@ render_censent(gui:any){
                             col4: 'description ...',
                         }]
                     }, {
-                        title: 'Ciblage et publicité',
-                        description: 'Ces cookies sont utilisés pour afficher des publicités susceptibles de vous intéresser en fonction de vos habitudes de navigation.Ces cookies, tels que servis par nos fournisseurs de contenu et / ou de publicité, peuvent associer des informations qu ils ont collectées sur notre site Web à dautres informations quils ont collectées de manière indépendante et concernant les activités du votre navigateur Web sur son réseau de sites Web.',
+                        title: gui.Traceur_3??'Ciblage et publicité',
+                        description: gui.Description_traceur3??'Ces cookies sont utilisés pour afficher des publicités susceptibles de vous intéresser en fonction de vos habitudes de navigation.Ces cookies, tels que servis par nos fournisseurs de contenu et / ou de publicité, peuvent associer des informations qu ils ont collectées sur notre site Web à dautres informations quils ont collectées de manière indépendante et concernant les activités du votre navigateur Web sur son réseau de sites Web.',
                         toggle: {
                             value: 'targeting',
                             enabled: false,
@@ -166,8 +190,8 @@ render_censent(gui:any){
                             col4: 'description ...',
                         }]
                     }, {
-                        title: 'Plus dinformation',
-                        description: 'Pour toute question relative à notre politique en matière de cookies et à vos choix, veuillez nous contacter.Pour en savoir plus, merci de consulter notre  <a class="cc-link" href="https://orestbida.com/contact">Politique sur les cookies.</a>.',
+                        title:gui.Titre_information??'Plus dinformation',
+                        description:gui.Description_information??'Pour toute question relative à notre politique en matière de cookies et à vos choix, veuillez nous contacter.Pour en savoir plus, merci de consulter notre  <a class="cc-link" href="https://orestbida.com/contact">Politique sur les cookies.</a>.',
                     }]
                 }
             }

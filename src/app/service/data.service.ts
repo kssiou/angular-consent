@@ -31,5 +31,12 @@ getClientById(id:any){
 updateClient(id:any,data:Client){
   return this.httpClient.put('http://127.0.0.1:8000/api/updateclient/'+id,data);
 }
+getChoixById(id:any){
+  return this.httpClient.get('http://127.0.0.1:8000/api/choix/'+id);
+}
+updateChoix(id:any,param:Parametrage){
+  return this.httpClient.put('http://127.0.0.1:8000/api/updatechoix/'+id,param);
+}
+
 }
 
