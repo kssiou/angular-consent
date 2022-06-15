@@ -11,12 +11,12 @@ import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ParametreEditComponent } from './parametre-edit/parametre-edit.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'Cookiesbar', pathMatch: 'full'},
-  {path: 'Cookiesbar', component: DashboardComponent},
+  {path: '', redirectTo: 'Welcome', pathMatch: 'full'},
+  {path: 'Welcome', component: DashboardComponent},
   {path: 'List', component: ListComponent},
   {path: 'settings/privacy', component: StatisticsComponent},
-  {path: 'settings/cdt', component: CoupensComponent},
-  {path: 'pages', component: PagesComponent},
+  {path: 'Information', component: CoupensComponent},
+  {path: 'Paramétrages', component: PagesComponent},
   {path: 'settings', component: SettingsComponent},
   {path:'client', component:ClientComponent},
   {path:'List', component:ListComponent},

@@ -1,9 +1,9 @@
 
 export const navbarData = [
     {
-        routeLink: 'Cookiesbar',
-        icon: 'fas fa-cookie-bite',
-        label: 'Barre de cookies',
+        routeLink: 'Welcome',
+        icon: 'fa fa-user',
+        label: 'Bienvenue chez nous',
         
     },
     {
@@ -17,14 +17,14 @@ export const navbarData = [
         label: 'Politique de confidentialité'
     },
     {
-        routeLink: 'settings/cdt',
-        icon: 'fas fa-tags',
+        routeLink: 'Information',
+        icon: 'fa fa-exclamation-circle',
         label: 'Conditions d\'utilisation'
     },
     {
-        routeLink: 'pages',
-        icon: 'fas fa-ban',
-        label: 'Ne vendez pas mes informations personnelles'
+        routeLink: 'Paramétrages',
+        icon: 'fas fa-cookie-bite',
+        label: 'Paramétrages'
     },
     
     {
@@ -32,29 +32,6 @@ export const navbarData = [
         icon: 'fas fa-cog',
         label: 'Settings'
     },
-    {
-        routeLink: '',
-        icon: 'fas fa-cog',
-        label: 'Menu with Children',
-        submenuLevel1: [
-            {
-                routeLink: '',
-                icon: '', // icon if needed
-                label: '',
-            },
-            {
-                routeLink: '',
-                icon: 'fal fa-cog', // icon if needed
-                label: 'Sub menu level 1',
-                submenuLevel2: [
-                    {
-                        routeLink: '',
-                        icon: 'fal fa-cog', // icon if needed
-                        label: 'Sub menu level 2',
-                    }
-                ]
-            }
-        ]
-    },
+   
 
 ];

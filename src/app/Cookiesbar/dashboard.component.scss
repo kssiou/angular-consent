@@ -1,3 +1,67 @@
+mat-card-title {
+    margin-bottom: 30px;
+}
+
+mat-form-field {
+    padding-left: 10px;
+}
+
+#funky {
+    background-color: #60fed2;
+}
+
+#turquoise {
+    background-color: #3859d0;
+}
+
+.wrap {
+    border: 1px solid rgb(241, 239, 239);
+    width: 1300px;
+    height: 1000px;
+    margin-bottom: 1rem;
+    &.vert {
+         ::ng-deep {
+            .mat-tab-body-content {
+                // border: 1px solid rgb(172, 172, 172);
+                border-radius: 1px;
+                background-color: white;
+                width: 100%;
+            }
+            .mat-tab-list {
+                padding-right: 20px;
+                margin-right: 60px;
+                margin-left: 40px;
+            }
+            .mat-tab-labels {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+            .mat-tab-group {
+                flex-direction: row;
+            }
+            .mat-ink-bar {
+                height: 100%;
+                left: calc(100% - 5px) !important;
+                width: 2px !important;
+            }
+            .mat-tab-header {
+                border-bottom: none;
+            }
+            .mat-tab-body-wrapper {
+                flex: 1 1 auto;
+            }
+            .mat-tab-header-pagination {
+                display: none !important;
+            }
+            .mat-tab-label {
+                font-size: large;
+                color: black;
+                font-stretch: semi-expanded;
+            }
+        }
+    }
+}
+
 body {
     background: #fff;
     color: #464855;
@@ -26,3 +90,27 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+#cgcu {
+    margin-top: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    font-size: x-large;
+}
+blockquote {
+    line-height: 1.7rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    color: rgb(5, 5, 5);
+    border-left: 2px solid #a1a1a1;
+}
+p,h3,h1 {
+    color: black;
+    font-size: 19px;
+}
+ul,li {
+    line-height:30px;
+    color: black;
+    font-size: 18px;
+}
+
