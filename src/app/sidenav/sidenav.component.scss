@@ -1,13 +1,10 @@
 .sidenav {
-  
     background-color: #8d5185;
     background-image: linear-gradient(315deg, #8d5185 0%, #a1bafe 74%);
-
     transition: all .5s ease;
     position: fixed;
     z-index: 1;
     top: 0;
-    width: 5rem;
     height: 100vh;
     box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
     .logo-container {
@@ -25,7 +22,6 @@
             font-weight: 900;
             cursor: pointer;
             border: none;
-
         }
         .logo-text {
             margin-left: 1.5rem;
@@ -105,45 +101,55 @@
         color: rgb(0, 0, 0);
     }
 }
-#mobiletic{
-  margin-left: 80px;
-  padding-top: 1rem;
-  padding-bottom: .10rem;
-  margin-top: -20px;
-  padding-bottom: 2px;
-  width: 2000px;
-//background-color: #f8ceec;
-//background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
-background-color: #8d5185;
+
+#mobiletic {
+    margin-left: 80px;
+    padding-top: 1rem;
+    padding-bottom: .10rem;
+    margin-top: -20px;
+    padding-bottom: 2px;
+    width: 100%;
+    //background-color: #f8ceec;
+    //background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+    background-color: #8d5185;
     background-image: linear-gradient(315deg, #8d5185 0%, #a1bafe 74%);
-
-
-  height: 79px;
+    height: 79px;
 }
+
 .nine h1 {
-    text-align:right; font-size:23px;  color:rgb(0, 0, 0); letter-spacing:1px;
-    font-family:Georgia,serif; font-weight:400;
+    text-align: right;
+    font-size: 23px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    font-family: Georgia, serif;
+    font-weight: 400;
     margin-left: 440px;
     margin-top: -10px;
-  }
-  .nine h1 span {
+}
+
+.nine h1 span {
     margin-top: -2px;
-      font-size:16px; color:rgb(31, 6, 29); word-spacing:1px; font-weight:normal; letter-spacing:2px;
-      text-transform: uppercase; font-family:Times,'Times New Roman',serif;font-weight:500;
-  
-      display: grid;
-      grid-template-columns: 1fr max-content 1fr;
-      grid-template-rows: 27px 0;
-      grid-gap: 20px;
-      align-items: center;
-  }
-  
-  .nine h1 span:after,.nine h1 span:before {
-      content: " ";
-      display: block;
-      border-bottom: 1px solid rgb(81, 159, 204);
-      border-top: 1px solid rgb(68, 201, 179);
-      height: 5px;
-    background-color:rgb(14, 70, 143);
-  }
- 
+    font-size: 16px;
+    color: rgb(31, 6, 29);
+    word-spacing: 1px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Times, 'Times New Roman', serif;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.nine h1 span:after,
+.nine h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid rgb(81, 159, 204);
+    border-top: 1px solid rgb(68, 201, 179);
+    height: 5px;
+    background-color: rgb(14, 70, 143);
+}

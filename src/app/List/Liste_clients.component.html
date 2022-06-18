@@ -1,5 +1,7 @@
-<a routerLink="/client" class="btn btn-primary btn-md mx-10" style="margin:30px;float:right;"> Ajouter</a>
-<!--
+<div class="container">
+    <a routerLink="/client" class="btn btn-primary btn-md mx-10" style="margin-top: 30px;margin-bottom: 30px; float:right;"> Ajouter</a>
+
+    <!--
 <table class="table table-bordered">
     <thead>
 
@@ -31,51 +33,52 @@
     </tbody>
 </table>
 -->
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
+        <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> id </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="Nom">
-        <th mat-header-cell *matHeaderCellDef> Nom </th>
-        <td mat-cell *matCellDef="let element">{{element.Nom}} </td>
-    </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="Nom">
+            <th mat-header-cell *matHeaderCellDef> Nom </th>
+            <td mat-cell *matCellDef="let element">{{element.Nom}} </td>
+        </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="Nom_d_entreprise">
-        <th mat-header-cell *matHeaderCellDef> Nom d'entreprise </th>
-        <td mat-cell *matCellDef="let element"> {{element.Nom_d_entreprise}}</td>
-    </ng-container>
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Nom_d_entreprise">
+            <th mat-header-cell *matHeaderCellDef> Nom d'entreprise </th>
+            <td mat-cell *matCellDef="let element"> {{element.Nom_d_entreprise}}</td>
+        </ng-container>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="Email">
-        <th mat-header-cell *matHeaderCellDef> Email </th>
-        <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
-    </ng-container>
-    <ng-container matColumnDef="Lien_du_site">
-        <th mat-header-cell *matHeaderCellDef> Lien du site </th>
-        <td mat-cell *matCellDef=" let element "> {{element.Lien_du_site}} </td>
-    </ng-container>
-    <ng-container matColumnDef="button">
-        <th mat-header-cell *matHeaderCellDef> .</th>
-        <td mat-cell *matCellDef=" let element ">
-            <div style="float: right;">
-                <a routerLink="/edit/{{element.id}}" class="btn btn-primary btn-sm mx-2"> Mise à jour</a>
-                <a routerLink="/afficherchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> afficher le choix</a>
-                <a routerLink="/editchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> edit parametrage</a>
-                <button class="btn btn-danger btn-sm" (click)="deleteData(element.id)">Supprimer</button>
-            </div>
-        </td>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Lien_du_site">
+            <th mat-header-cell *matHeaderCellDef> Lien du site </th>
+            <td mat-cell *matCellDef=" let element "> {{element.Lien_du_site}} </td>
+        </ng-container>
+        <ng-container matColumnDef="button">
+            <th mat-header-cell *matHeaderCellDef> .</th>
+            <td mat-cell *matCellDef=" let element ">
+                <div style="float: right;">
+                    <a routerLink="/edit/{{element.id}}" class="btn btn-primary btn-sm mx-2"> Mise à jour</a>
+                    <a routerLink="/afficherchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> afficher le choix</a>
+                    <a routerLink="/editchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> edit parametrage</a>
+                    <button class="btn btn-danger btn-sm" (click)="deleteData(element.id)">Supprimer</button>
+                </div>
+            </td>
 
-    </ng-container>
+        </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns "></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns; "></tr>
-</table>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns "></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns; "></tr>
+    </table>
+</div>
