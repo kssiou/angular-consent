@@ -67,7 +67,6 @@ import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ClientComponent } from './client/client.component';
 import { ParametreCrudComponent } from './parametre-crud/parametre-crud.component';
 import { ParametreEditComponent } from './parametre-edit/parametre-edit.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -104,7 +103,6 @@ const appRoutes: Routes = [
     ClientEditComponent,
     ParametreCrudComponent,
       ParametreEditComponent,
-      HeroDetailComponent
    ],
   imports: [
     BrowserModule,

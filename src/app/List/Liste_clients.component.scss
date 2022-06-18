@@ -1,3 +1,32 @@
 table {
     width: 100%;
 }
+
+mat-header-cell {
+    font-weight: bold;
+}
+
+.mat-column-id {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.mat-column-Nom {
+    font-size: 15px;
+}
+
+.mat-column-Nom_d_entreprise {
+    font-size: 15px;
+}
+
+.mat-column-Email {
+    font-size: 15px;
+}
+
+.mat-column-Lien_du_site {
+    font-size: 15px;
+}
+
+table {
+    margin: 30px;
+}

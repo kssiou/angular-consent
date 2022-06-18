@@ -1,4 +1,4 @@
-<a routerLink="/client" class="btn btn-warning btn-sm mx-2" style="margin:20px;float:right;"> Ajouter</a>
+<a routerLink="/client" class="btn btn-primary btn-md mx-10" style="margin:30px;float:right;"> Ajouter</a>
 <!--
 <table class="table table-bordered">
     <thead>
@@ -50,7 +50,7 @@
 
     <!-- Weight Column -->
     <ng-container matColumnDef="Nom_d_entreprise">
-        <th mat-header-cell *matHeaderCellDef> Nom_d_entreprise </th>
+        <th mat-header-cell *matHeaderCellDef> Nom d'entreprise </th>
         <td mat-cell *matCellDef="let element"> {{element.Nom_d_entreprise}}</td>
     </ng-container>
 
@@ -60,16 +60,18 @@
         <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
     </ng-container>
     <ng-container matColumnDef="Lien_du_site">
-        <th mat-header-cell *matHeaderCellDef> Lien_du_site </th>
+        <th mat-header-cell *matHeaderCellDef> Lien du site </th>
         <td mat-cell *matCellDef=" let element "> {{element.Lien_du_site}} </td>
     </ng-container>
     <ng-container matColumnDef="button">
         <th mat-header-cell *matHeaderCellDef> .</th>
-        <td mat-cell *matCellDef=" let element "><button class="btn btn-danger btn-sm" (click)="deleteData(element.id)">Supprimer</button>
-            <a routerLink="/edit/{{element.id}}" class="btn btn-primary btn-sm mx-2"> Mise à jour</a>
-            <a routerLink="/afficherchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> afficher le choix</a>
-            <a routerLink="/editchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> edit parametrage</a>
-
+        <td mat-cell *matCellDef=" let element ">
+            <div style="float: right;">
+                <a routerLink="/edit/{{element.id}}" class="btn btn-primary btn-sm mx-2"> Mise à jour</a>
+                <a routerLink="/afficherchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> afficher le choix</a>
+                <a routerLink="/editchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> edit parametrage</a>
+                <button class="btn btn-danger btn-sm" (click)="deleteData(element.id)">Supprimer</button>
+            </div>
         </td>
 
     </ng-container>

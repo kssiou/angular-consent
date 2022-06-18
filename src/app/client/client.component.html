@@ -1,31 +1,19 @@
 <h1>
     L'ajout d'un client </h1>
 <form>
-    <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label for="Nom">Nom </label>
-            <input type="text" class="form-control" id="Nom" placeholder="Nom" name="Nom" [(ngModel)]="client.Nom">
-        </div>
+    <label class="label" for="Nom">Nom :</label>
+    <input class="form-control form-control-lg" type="text" id="Nom" placeholder="Nom" name="Nom" [(ngModel)]="client.Nom">
 
-        <div class="col-md-4 mb-3">
-            <label for="Email">Email</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="Email">@</span>
-                </div>
-                <input type="text" class="form-control" id="Email" placeholder="Username" aria-describedby="inputGroupPrepend2" name="Email" [(ngModel)]="client.Email">
-            </div>
-        </div>
-    </div>
+    <label class="label" for="Email">Email :</label>
 
-    <div class="col-md-3 mb-3">
-        <label for="Nom_d_entreprise">Nom d'entreprise</label>
-        <input type="text" class="form-control" id="Nom_d_entreprise" placeholder="Nom d'\entreprise" name="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
-    </div>
-    <div class="col-md-3 mb-3">
-        <label for="Lien_du_site">Lien du site</label>
-        <input type="text" class="form-control" id="Lien_du_site" placeholder="Lien_du_site" name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
-    </div>
+    <input class="form-control form-control-lg" type="text" id="Email" placeholder="Username" aria-describedby="inputGroupPrepend2" name="Email" [(ngModel)]="client.Email">
+
+    <label class="label" for="Nom_d_entreprise">Nom d'entreprise :</label>
+
+    <input class="form-control form-control-lg" type="text" id="Nom_d_entreprise" placeholder="Nom d'entreprise" name="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
+    <label class="label" for="Lien_du_site">Nom d'entreprise :</label>
+
+    <input class="form-control form-control-lg" type="text" id="Lien_du_site" placeholder="Lien du site" name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
 
     <button class="btn btn-dark btn -sm mt-4" id="ajouter" routerLink="/List/" (click)="insertData()">Ajouter</button>
 </form>
