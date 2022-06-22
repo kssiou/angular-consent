@@ -2,8 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Client } from '../client';
 import { dataService } from '../data.service';
+import {MatDialog} from '@angular/material/dialog';
+
 
 import { DataService } from '../service/data.service';
+import { ClientComponent } from '../client/client.component';
+import { ClientEditComponent } from '../client-edit/client-edit.component';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -20,11 +24,26 @@ export interface PeriodicElement {
 
 export class ListComponent implements OnInit {
 a:string='cloud';
-  constructor(public dato: dataService,public dataservice:DataService,private router:Router ) {  }
+  constructor(public dato: dataService,public dataservice:DataService,private router:Router, public client: MatDialog,public clientedit : MatDialog ) {  }
+  ajouterAlert() {
+    const clientgRef = this.client.open(ClientComponent,{
+      width:'40%'
+    });
+  
+    
+
+
+   
+    };
+    editeralert(){
+      const clienteditgRef = this.clientedit.open(ClientEditComponent,{
+        width:'40%'
+      })};
   clients:any;
-  client=new Client;
+  client1=new Client;
   parametrage:any;
   displayedColumns: string[] = ['id', 'Nom', 'Nom_d_entreprise', 'Email','Lien_du_site','button'];
+  
   
   dataSource: any;
   ngOnInit(): void {
@@ -51,7 +70,7 @@ a:string='cloud';
   insertData(){
     //console.log('bonjour-insertion-test');
     //console.log(this.product);
-    this.dataservice.insertData(this.client).subscribe(res =>{
+    this.dataservice.insertData(this.client1).subscribe(res =>{
       //console.log(res);
       this.getClientData();
     })
@@ -65,3 +84,4 @@ a:string='cloud';
   
   }
 }
+

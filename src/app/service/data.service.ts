@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Client } from '../client';
 import { Parametrage } from '../parametrage';
+import { Admin } from '../admin';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
- 
+  permission:any;
+
   constructor(private httpClient : HttpClient) { }
   getData(){
     return this.httpClient.get('http://127.0.0.1:8000/api/clients');
@@ -36,6 +38,10 @@ getChoixById(id:any){
 }
 updateChoix(id:any,param:Parametrage){
   return this.httpClient.put('http://127.0.0.1:8000/api/updatechoix/'+id,param);
+}
+login(admin:Admin){
+  return this.httpClient.put('http://127.0.0.1:8000/api/login/',admin);
+
 }
 
 }

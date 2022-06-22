@@ -1,21 +1,23 @@
-<h1>
-    L'ajout d'un client </h1>
-<form (ngSubmit)="updateClient()">
+<div style="margin-top:30px;" class="container">
+    <h1>
+        Modifier les informations du client </h1>
+    <form (ngSubmit)="updateClient()">
 
-    <label class="label" for="Nom">Nom :</label>
-    <input class="form-control form-control-lg" type="text" id="Nom" placeholder="Nom" name="Nom" [(ngModel)]="client.Nom">
+        <label class="label" for="Nom">Nom :</label>
+        <input class="form-control form-control-lg" type="text" id="Nom" placeholder="Nom" name="Nom" [(ngModel)]="client.Nom">
 
-    <label class="label" for="Email">Email :</label>
+        <label class="label" for="Email">Email :</label>
 
-    <input class="form-control form-control-lg" type="text" id="Email" placeholder="Username" aria-describedby="inputGroupPrepend2" name="Email" [(ngModel)]="client.Email">
+        <input class="form-control form-control-lg" type="text" id="Email" placeholder="Username" aria-describedby="inputGroupPrepend2" name="Email" [(ngModel)]="client.Email">
 
-    <label class="label" for="Nom_d_entreprise">Nom d'entreprise :</label>
+        <label class="label" for="Nom_d_entreprise">Nom d'entreprise :</label>
 
-    <input class="form-control form-control-lg" type="text" id="Nom_d_entreprise" placeholder="Nom_d_entreprise" name="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
-    <label class="label" for="Lien_du_site">Nom d'entreprise :</label>
+        <input class="form-control form-control-lg" type="text" id="Nom_d_entreprise" placeholder="Nom_d_entreprise" name="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
+        <label class="label" for="Lien_du_site">Lien d'entreprise :</label>
 
-    <input class="form-control form-control-lg" type="text" id="Lien_du_site" placeholder="Lien_du_site" name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
+        <input class="form-control form-control-lg" type="text" id="Lien_du_site" placeholder="Lien d'entreprise " name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
 
 
-    <button mat-raised-button color="primary" routerLink="/List/">Mise à jour</button>
-</form>
+        <button mat-raised-button color="primary">Mise à jour</button>
+    </form>
+</div>

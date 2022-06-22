@@ -19,6 +19,7 @@ mat-form-field {
     width: 1300px;
     height: 1000px;
     margin-bottom: 1rem;
+    margin-top: 20px;
     &.vert {
          ::ng-deep {
             .mat-tab-body-content {
@@ -34,7 +35,7 @@ mat-form-field {
             }
             .mat-tab-labels {
                 flex-direction: column;
-                margin-top: 10px;
+                margin-top: 20px;
             }
             .mat-tab-group {
                 flex-direction: row;
@@ -55,7 +56,7 @@ mat-form-field {
             }
             .mat-tab-label {
                 font-size: large;
-                color: black;
+                color: rgb(0, 0, 0);
                 font-stretch: semi-expanded;
             }
         }

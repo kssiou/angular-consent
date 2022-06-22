@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { dataService } from '../data.service';
 import { DataService } from '../service/data.service';
 import { Client } from 'src/app/client';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client',
@@ -12,7 +13,7 @@ export class ClientComponent implements OnInit {
   client=new Client;
   clients: any;
   
-  constructor(public dataservice:DataService) { }
+  constructor(public dataservice:DataService,public route:Router ) { }
   insertData(){
     //console.log('bonjour-insertion-test');
     //console.log(this.product);

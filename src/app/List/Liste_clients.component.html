@@ -1,5 +1,7 @@
 <div class="container">
-    <a routerLink="/client" class="btn btn-primary btn-md mx-10" style="margin-top: 30px;margin-bottom: 30px; float:right;"> Ajouter</a>
+    <a mat-raised-button color="primary" style="margin-top: 30px;margin-bottom: 30px; float:right;" (click)="ajouterAlert()"> Ajouter</a>
+
+
 
     <!--
 <table class="table table-bordered">
@@ -70,8 +72,8 @@
             <td mat-cell *matCellDef=" let element ">
                 <div style="float: right;">
                     <a routerLink="/edit/{{element.id}}" class="btn btn-primary btn-sm mx-2"> Mise à jour</a>
-                    <a routerLink="/afficherchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> afficher le choix</a>
-                    <a routerLink="/editchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> edit parametrage</a>
+                    <a routerLink="/afficherchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> Afficher le choix</a>
+                    <a routerLink="/editchoix/{{element.id}}" class="btn btn-primary btn-sm mx-2"> Edit parametrage</a>
                     <button class="btn btn-danger btn-sm" (click)="deleteData(element.id)">Supprimer</button>
                 </div>
             </td>

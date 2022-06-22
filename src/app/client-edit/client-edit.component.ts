@@ -12,6 +12,7 @@ export class ClientEditComponent implements OnInit {
   id:any;
   client=new Client;
   data: any;
+  clients:any;
 
 
   constructor(private route:ActivatedRoute,private dataservice:DataService) { }
@@ -32,10 +33,20 @@ export class ClientEditComponent implements OnInit {
   }
   updateClient(){
     this.dataservice.updateClient(this.id,this.client).subscribe(
-      res => {
+      res => {this. getClientData();
         
       }
     )
+  }
+  getClientData() {
+
+    console.log('liste des clients');
+//    console.log(this.position_x_gui)
+    this.dataservice.getData().subscribe(res =>{
+      console.log(res);
+      this.clients=res;
+    }
+      )
   }
  
 }

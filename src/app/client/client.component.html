@@ -1,19 +1,22 @@
-<h1>
-    L'ajout d'un client </h1>
-<form>
-    <label class="label" for="Nom">Nom :</label>
-    <input class="form-control form-control-lg" type="text" id="Nom" placeholder="Nom" name="Nom" [(ngModel)]="client.Nom">
+<div style="margin-top:30px;" class="container">
 
-    <label class="label" for="Email">Email :</label>
+    <h1>
+        L'ajout d'un client </h1>
+    <form>
+        <label class="label" for="Nom">Nom :</label>
+        <input class="form-control form-control-lg" type="text" id="Nom" placeholder="Nom" name="Nom" [(ngModel)]="client.Nom">
 
-    <input class="form-control form-control-lg" type="text" id="Email" placeholder="Username" aria-describedby="inputGroupPrepend2" name="Email" [(ngModel)]="client.Email">
+        <label class="label" for="Email">Email :</label>
 
-    <label class="label" for="Nom_d_entreprise">Nom d'entreprise :</label>
+        <input class="form-control form-control-lg" type="text" id="Email" placeholder="Email" aria-describedby="inputGroupPrepend2" name="Email" [(ngModel)]="client.Email">
 
-    <input class="form-control form-control-lg" type="text" id="Nom_d_entreprise" placeholder="Nom d'entreprise" name="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
-    <label class="label" for="Lien_du_site">Nom d'entreprise :</label>
+        <label class="label" for="Nom_d_entreprise">Nom d'entreprise :</label>
 
-    <input class="form-control form-control-lg" type="text" id="Lien_du_site" placeholder="Lien du site" name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
+        <input class="form-control form-control-lg" type="text" id="Nom_d_entreprise" placeholder="Nom d'entreprise" name="Nom_d_entreprise" [(ngModel)]="client.Nom_d_entreprise">
+        <label class="label" for="Lien_du_site">Lien d'entreprise :</label>
 
-    <button class="btn btn-dark btn -sm mt-4" id="ajouter" routerLink="/List/" (click)="insertData()">Ajouter</button>
-</form>
+        <input class="form-control form-control-lg" type="text" id="Lien_du_site" placeholder="Lien d'entreprise " name="Lien_du_site" [(ngModel)]="client.Lien_du_site">
+
+        <button mat-raised-button color="primary" id="ajouter" routerLink="/List/" (click)="insertData()">Ajouter</button>
+    </form>
+</div>

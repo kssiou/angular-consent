@@ -9,20 +9,27 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { ClientComponent } from './client/client.component';
 import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ParametreEditComponent } from './parametre-edit/parametre-edit.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+import { BodyComponent } from './body/body.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'Welcome', pathMatch: 'full'},
-  {path: 'Welcome', component: DashboardComponent},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'Welcome', component: DashboardComponent
+},
   {path: 'List', component: ListComponent},
   {path: 'settings/privacy', component: StatisticsComponent},
   {path: 'Information', component: CoupensComponent},
   {path: 'Paramétrages', component: PagesComponent},
   {path: 'settings', component: SettingsComponent},
   {path:'client', component:ClientComponent},
-  {path:'List', component:ListComponent},
+  {path:'List', component:ListComponent,canActivate:[AuthGuard]},
   {path:'choix', component:ClientEditComponent},
-  {path:'editchoix', component:ParametreEditComponent}
+  {path:'editchoix', component:ParametreEditComponent},
+  {path:'login', component:LoginComponent},
+  {path:'oho', component:BodyComponent}
 
+  
 
 
 ];

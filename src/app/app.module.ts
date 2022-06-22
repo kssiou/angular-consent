@@ -67,6 +67,8 @@ import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ClientComponent } from './client/client.component';
 import { ParametreCrudComponent } from './parametre-crud/parametre-crud.component';
 import { ParametreEditComponent } from './parametre-edit/parametre-edit.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
 
 const appRoutes: Routes = [
   {
@@ -76,15 +78,16 @@ const appRoutes: Routes = [
     path:'edit/:id', component:ClientEditComponent
   },
 
-  {
-    path:'List', component:ListComponent
-  },
+  
   {
     path:'afficherchoix/:id', component:ParametreCrudComponent
   }
   ,
   {
     path:'editchoix/:id', component:ParametreEditComponent
+  },
+  {
+    path:'login', component:LoginComponent
   }
 ]
 @NgModule({
@@ -103,6 +106,7 @@ const appRoutes: Routes = [
     ClientEditComponent,
     ParametreCrudComponent,
       ParametreEditComponent,
+      LoginComponent,
    ],
   imports: [
     BrowserModule,
@@ -172,7 +176,7 @@ const appRoutes: Routes = [
     FormsModule,
      
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
